@@ -2,6 +2,7 @@ package com.capstone.nusal.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.capstone.nusal.R
 
 class OnboardingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
