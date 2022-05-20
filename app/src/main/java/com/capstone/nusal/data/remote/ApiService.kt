@@ -6,12 +6,14 @@ import retrofit2.http.POST
 
 interface ApiService {
 
+    // TODO: Ganti jadi @Body
+
     @FormUrlEncoded
     @POST() // endpoint
     suspend fun userLogin(
         @Field("email") email: String,
         @Field("password") password: String
-    ) // return type
+    ): LoginResponse
 
     @FormUrlEncoded
     @POST()
@@ -19,7 +21,7 @@ interface ApiService {
         @Field("name") name: String,
         @Field("email") email: String,
         @Field("password") password: String
-    )
+    ): RegisterResponse
 
 
 }

@@ -1,4 +1,9 @@
 package com.capstone.nusal.viewmodel
 
-class LoginViewModel {
+import androidx.lifecycle.ViewModel
+import com.capstone.nusal.data.NusaRepository
+
+class LoginViewModel(private val  nusaRepository: NusaRepository): ViewModel() {
+
+    fun userLogin(email: String, password: String) = nusaRepository.login(email, password)
 }
