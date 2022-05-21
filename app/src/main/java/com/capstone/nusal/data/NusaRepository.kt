@@ -5,9 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.liveData
 import androidx.lifecycle.map
-import com.capstone.nusal.data.remote.ApiService
-import com.capstone.nusal.data.remote.LoginResponse
-import com.capstone.nusal.data.remote.RegisterResponse
+import com.capstone.nusal.data.remote.*
 
 class NusaRepository(
     private val apiService: ApiService
@@ -23,7 +21,8 @@ class NusaRepository(
         emit(Result.Loading)
 
         try {
-            val response = apiService.userLogin(email, password)
+            val loginRequestBody = LoginRequestBody(email, password)
+            val response = apiService.userLogin(loginRequestBody)
 
             _isLoginSuccess.value = response
 
@@ -42,7 +41,8 @@ class NusaRepository(
         emit(Result.Loading)
 
         try {
-            val response = apiService.userRegister(name, email, password)
+            val registerRequestBody = RegisterRequestBody(name, email, password)
+            val response = apiService.userRegister(registerRequestBody)
 
             _isRegisterSuccess.value = response
 
@@ -56,7 +56,6 @@ class NusaRepository(
             emit(Result.Error(e.message.toString()))
         }
     }
-
 
     companion object {
         @Volatile

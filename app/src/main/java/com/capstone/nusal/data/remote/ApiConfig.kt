@@ -1,5 +1,6 @@
 package com.capstone.nusal.data.remote
 
+import com.capstone.nusal.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -8,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object ApiConfig {
 
     // TODO: Simpan URL di BuildConfig
-    private const val BASE_URL: String = ""
+    private const val BASE_URL: String = BuildConfig.REMOTE_API_URL
 
     fun getApiService(): ApiService {
         val loggingInterceptor =
