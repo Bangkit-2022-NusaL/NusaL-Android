@@ -3,8 +3,11 @@ package com.capstone.nusal.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.core.widget.doOnTextChanged
 import com.capstone.nusal.R
 import com.capstone.nusal.data.Result
 import com.capstone.nusal.databinding.ActivityRegisterBinding
@@ -24,6 +27,74 @@ class RegisterActivity : AppCompatActivity() {
         val registerViewModel: RegisterViewModel by viewModels {
             factory
         }
+
+        val fieldRegisterName = binding.edtRegisterName
+        val fieldRegisterEmail = binding.edtRegisterEmail
+        val fieldRegisterPassword = binding.edtRegisterPassword
+
+        fieldRegisterName.doOnTextChanged { text, start, before, count ->
+            if(text.toString().isEmpty()) {
+                binding.tilRegisterName.apply {
+                    error = "Nama tidak boleh kosong"
+                    isErrorEnabled = true
+                }
+            } else {
+                binding.tilRegisterName.apply {
+                    error = null
+                    isErrorEnabled = false
+                }
+            }
+        }
+
+        fieldRegisterEmail.addTextChangedListener(object: TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                if(fieldRegisterEmail.isEmailComply) {
+                    binding.tilRegisterEmail.apply {
+                        error = null
+                        isErrorEnabled = false
+                    }
+                } else {
+                    binding.tilRegisterEmail.apply {
+                        error = "Email tidak boleh kosong"
+                        isErrorEnabled = true
+                    }
+                }
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+
+            }
+
+        })
+
+        fieldRegisterPassword.addTextChangedListener(object: TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                if(fieldRegisterPassword.isPasswordComply) {
+                    binding.tilRegisterPassword.apply {
+                        error = null
+                        isErrorEnabled = false
+                    }
+                } else {
+                    binding.tilRegisterPassword.apply {
+                        error = "Password minimal 8 karakter"
+                        isErrorEnabled = true
+                    }
+                }
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+
+            }
+
+        })
 
         binding.btnRegister.setOnClickListener {
             val registerName = binding.edtRegisterName.text.toString()

@@ -8,7 +8,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiConfig {
 
-    // TODO: Simpan URL di BuildConfig
     private const val BASE_URL: String = BuildConfig.REMOTE_API_URL
 
     fun getApiService(): ApiService {
