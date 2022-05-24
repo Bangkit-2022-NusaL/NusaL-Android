@@ -1,5 +1,6 @@
 package com.capstone.nusal.ui
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,10 +8,19 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
+import androidx.lifecycle.ViewModelProvider
 import com.capstone.nusal.data.Result
+import com.capstone.nusal.data.SessionDataStore
 import com.capstone.nusal.databinding.ActivityLoginBinding
 import com.capstone.nusal.viewmodel.LoginViewModel
 import com.capstone.nusal.viewmodel.ViewModelFactory
+import com.capstone.nusal.viewmodel.datastore.SessionViewModel
+import com.capstone.nusal.viewmodel.datastore.SessionViewModelFactory
+
+internal val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "session")
 
 class LoginActivity : AppCompatActivity() {
 
@@ -20,6 +30,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val session = SessionDataStore.getInstance(dataStore)
+        val sessionViewModel = ViewModelProvider(this, SessionViewModelFactory(session))[SessionViewModel::class.java]
 
         val factory: ViewModelFactory = ViewModelFactory.getInstance(this)
         val loginViewModel: LoginViewModel by viewModels {
@@ -112,7 +125,8 @@ class LoginActivity : AppCompatActivity() {
                             }
                             is Result.Success -> {
                                 // Stop loading
-                                // Save token
+                                val response = result.data
+                                sessionViewModel.saveSession(response.token.toString())
 
                                 startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                                 finish()
