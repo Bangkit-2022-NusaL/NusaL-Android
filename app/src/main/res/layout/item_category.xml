@@ -18,19 +18,19 @@
 
         <ImageView
             android:id="@+id/img_category"
-            android:layout_width="300dp"
+            android:layout_width="360dp"
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
             android:contentDescription="Category Image"
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars" />
+            tools:src="@drawable/kategori_tumbuhan" />
 
         <View
-            android:layout_width="300dp"
+            android:layout_width="360dp"
             android:layout_height="match_parent"
-            android:background="@drawable/category_linear_gradient"
+            android:background="@drawable/linear_gradient_angle0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,7 +45,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Tumbuhan" />
+            tools:text="Tumbuhan"
+            android:textColor="@color/black"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

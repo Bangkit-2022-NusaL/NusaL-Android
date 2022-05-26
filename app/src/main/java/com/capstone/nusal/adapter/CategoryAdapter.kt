@@ -1,14 +1,15 @@
 package com.capstone.nusal.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.capstone.nusal.R
 import com.capstone.nusal.data.CategoryModel
 import com.capstone.nusal.databinding.ItemCategoryBinding
+import com.capstone.nusal.ui.DetailCategoryActivity
 
 class CategoryAdapter: ListAdapter<CategoryModel, CategoryAdapter.CategoryViewHolder>(DIFF_CALLBACK) {
 
@@ -38,8 +39,9 @@ class CategoryAdapter: ListAdapter<CategoryModel, CategoryAdapter.CategoryViewHo
             binding.tvCategoryName.text = data.categoryName
 
             itemView.setOnClickListener {
-                // To DetailCategory, intent with data, then proceed to take list of word/sentence
-                // as per intent data. Like 'animals' then fetch animal image, animal word from strings.xml
+                val toDetailCategory = Intent(itemView.context, DetailCategoryActivity::class.java)
+                toDetailCategory.putExtra(DetailCategoryActivity.EXTRA_CATEGORY, data.categoryName)
+                itemView.context.startActivity(toDetailCategory)
             }
         }
     }

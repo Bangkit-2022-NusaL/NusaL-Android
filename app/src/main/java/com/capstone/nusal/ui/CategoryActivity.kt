@@ -14,7 +14,7 @@ class CategoryActivity : AppCompatActivity() {
         binding = ActivityCategoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Get array data from strings.xml
+        // Get array data from strings.xml (category name and image link)
         // Instantiate recyclerview, layoutmanager, adapter.
     }
 }
