@@ -1,14 +1,12 @@
 package com.capstone.nusal.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.capstone.nusal.R
 import com.capstone.nusal.data.SessionDataStore
 import com.capstone.nusal.data.TokenHolder
 import com.capstone.nusal.databinding.ActivityMainBinding
-import com.capstone.nusal.viewmodel.ViewModelFactory
 import com.capstone.nusal.viewmodel.datastore.SessionViewModel
 import com.capstone.nusal.viewmodel.datastore.SessionViewModelFactory
 
@@ -24,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         val session = SessionDataStore.getInstance(dataStore)
         val sessionViewModel = ViewModelProvider(this, SessionViewModelFactory(session))[SessionViewModel::class.java]
 
-        // Note: Pindahkan ke splashscreen?
+        // Note: Pindahkan ke SplashScreen?
         sessionViewModel.getToken().observe(this) { token ->
             if(token.isNotEmpty()) {
                 TokenHolder.token = token
@@ -46,5 +44,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         // TODO: Logout
+
+        binding.cardBelajar.setOnClickListener {
+            startActivity(Intent(this@MainActivity, LearnLanguageActivity::class.java))
+        }
+
+        binding.cardKamus.setOnClickListener {
+            startActivity(Intent(this@MainActivity, KamusCategoryActivity::class.java))
+        }
     }
 }

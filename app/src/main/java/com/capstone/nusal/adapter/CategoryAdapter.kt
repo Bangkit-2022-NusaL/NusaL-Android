@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.capstone.nusal.data.CategoryModel
 import com.capstone.nusal.databinding.ItemCategoryBinding
-import com.capstone.nusal.ui.DetailCategoryActivity
+import com.capstone.nusal.ui.KamusDetailCategoryActivity
 
 class CategoryAdapter: ListAdapter<CategoryModel, CategoryAdapter.CategoryViewHolder>(DIFF_CALLBACK) {
 
@@ -39,8 +39,8 @@ class CategoryAdapter: ListAdapter<CategoryModel, CategoryAdapter.CategoryViewHo
             binding.tvCategoryName.text = data.categoryName
 
             itemView.setOnClickListener {
-                val toDetailCategory = Intent(itemView.context, DetailCategoryActivity::class.java)
-                toDetailCategory.putExtra(DetailCategoryActivity.EXTRA_CATEGORY, data.categoryName)
+                val toDetailCategory = Intent(itemView.context, KamusDetailCategoryActivity::class.java)
+                toDetailCategory.putExtra(KamusDetailCategoryActivity.EXTRA_CATEGORY, data.categoryName)
                 itemView.context.startActivity(toDetailCategory)
             }
         }

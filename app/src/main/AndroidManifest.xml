@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.capstone.nusal">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -16,13 +16,19 @@
         android:theme="@style/Theme.NusaL"
         tools:targetApi="31">
         <activity
-            android:name=".ui.OnboardingActivity"
+            android:name=".ui.LearnLanguageActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.DetailCategoryActivity"
+            android:name=".ui.LearnLanguageDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.CategoryActivity"
+            android:name=".ui.SplashActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.KamusDetailCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.KamusCategoryActivity"
             android:exported="false" />
         <activity
             android:name=".ui.RegisterActivity"

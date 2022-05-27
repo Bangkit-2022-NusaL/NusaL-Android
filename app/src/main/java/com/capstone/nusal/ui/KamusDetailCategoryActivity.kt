@@ -1,17 +1,16 @@
 package com.capstone.nusal.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.capstone.nusal.R
-import com.capstone.nusal.databinding.ActivityDetailCategoryBinding
+import androidx.appcompat.app.AppCompatActivity
+import com.capstone.nusal.databinding.ActivityKamusDetailCategoryBinding
 
-class DetailCategoryActivity : AppCompatActivity() {
+class KamusDetailCategoryActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityDetailCategoryBinding
+    private lateinit var binding: ActivityKamusDetailCategoryBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDetailCategoryBinding.inflate(layoutInflater)
+        binding = ActivityKamusDetailCategoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // RecyclerView first? then submitList depending on intent?
