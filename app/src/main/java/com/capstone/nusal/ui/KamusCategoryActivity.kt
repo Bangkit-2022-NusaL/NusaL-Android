@@ -8,6 +8,7 @@ import com.capstone.nusal.adapter.CategoryAdapter
 import com.capstone.nusal.data.CategoryModel
 import com.capstone.nusal.databinding.ActivityKamusCategoryBinding
 
+// Kategori Kamus
 class KamusCategoryActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityKamusCategoryBinding

@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.capstone.nusal.databinding.ActivityKamusDetailCategoryBinding
 
+// Detail kategori, berisi contoh kata (kucing, anjing, sapi, dsb.)
 class KamusDetailCategoryActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityKamusDetailCategoryBinding
@@ -18,7 +19,7 @@ class KamusDetailCategoryActivity : AppCompatActivity() {
         // Get Intent
         when(intent.getStringExtra(EXTRA_CATEGORY)) {
             "Tumbuhan" -> {
-                // fetch tumbuhan strings and submit list
+                // fetch tumbuhan strings, AND also take its all description (for intent). and submit list
             }
             "Hewan" -> {
                 // fetch hewan strings and submit list

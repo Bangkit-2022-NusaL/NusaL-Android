@@ -32,6 +32,6 @@ class LearnLanguageDetailActivity : AppCompatActivity() {
         }
          */
 
-
+        // Find a way to clear canvas (maybe directly in CustomCanvasDrawer)
     }
 }

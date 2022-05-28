@@ -11,6 +11,7 @@ import com.capstone.nusal.data.CategoryModel
 import com.capstone.nusal.databinding.ItemCategoryBinding
 import com.capstone.nusal.ui.KamusDetailCategoryActivity
 
+// Ini dipakai di KamusCategoryActivity
 class CategoryAdapter: ListAdapter<CategoryModel, CategoryAdapter.CategoryViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(

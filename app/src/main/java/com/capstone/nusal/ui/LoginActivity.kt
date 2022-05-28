@@ -112,7 +112,7 @@ class LoginActivity : AppCompatActivity() {
 //        }
 
         binding.btnLogin.setOnClickListener {
-            val loginEmail = binding.edtLoginEmail.text.toString()
+            val loginEmail = binding.edtLoginEmail.text.toString().lowercase()
             val loginPassword = binding.edtLoginPassword.text.toString()
 
             if(loginEmail.isNotEmpty() && loginPassword.isNotEmpty()) {

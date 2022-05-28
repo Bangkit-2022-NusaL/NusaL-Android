@@ -98,7 +98,7 @@ class RegisterActivity : AppCompatActivity() {
 
         binding.btnRegister.setOnClickListener {
             val registerName = binding.edtRegisterName.text.toString()
-            val registerEmail = binding.edtRegisterEmail.text.toString()
+            val registerEmail = binding.edtRegisterEmail.text.toString().lowercase()
             val registerPassword = binding.edtRegisterPassword.text.toString()
 
             if(registerName.isNotEmpty() && registerEmail.isNotEmpty() && registerPassword.isNotEmpty()) {

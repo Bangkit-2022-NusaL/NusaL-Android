@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         val session = SessionDataStore.getInstance(dataStore)
         val sessionViewModel = ViewModelProvider(this, SessionViewModelFactory(session))[SessionViewModel::class.java]
 
-        // Note: Pindahkan ke SplashScreen?
         sessionViewModel.getToken().observe(this) { token ->
             if(token.isNotEmpty()) {
                 TokenHolder.token = token

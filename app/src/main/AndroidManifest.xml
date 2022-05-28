@@ -16,28 +16,41 @@
         android:theme="@style/Theme.NusaL"
         tools:targetApi="31">
         <activity
-            android:name=".ui.LearnLanguageActivity"
+            android:name=".ui.OnboardingActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.KamusWordActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NusaL" />
+        <activity
+            android:name=".ui.LearnLanguageActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NusaL" />
         <activity
             android:name=".ui.LearnLanguageDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.SplashActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.NusaL" />
         <activity
             android:name=".ui.KamusDetailCategoryActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.NusaL" />
         <activity
             android:name=".ui.KamusCategoryActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.NusaL" />
         <activity
             android:name=".ui.RegisterActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.NusaL" />
         <activity
             android:name=".ui.LoginActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.NusaL" />
         <activity
             android:name=".ui.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
