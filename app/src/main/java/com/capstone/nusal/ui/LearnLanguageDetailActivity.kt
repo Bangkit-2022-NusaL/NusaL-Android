@@ -2,7 +2,6 @@ package com.capstone.nusal.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.capstone.nusal.R
 import com.capstone.nusal.databinding.ActivityLearnLanguageDetailBinding
 
 class LearnLanguageDetailActivity : AppCompatActivity() {
@@ -15,7 +14,11 @@ class LearnLanguageDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Get extra item from intent
+        val data = intent.getStringExtra(EXTRA_LANGUAGE)
+
         // Load image and text
+        binding.tvLearnAksaraTitle.text = data
+
 
         binding.imgCanvas.apply {
             isDrawingCacheEnabled = true
@@ -33,5 +36,9 @@ class LearnLanguageDetailActivity : AppCompatActivity() {
          */
 
         // Find a way to clear canvas (maybe directly in CustomCanvasDrawer)
+    }
+
+    companion object {
+        const val EXTRA_LANGUAGE = "extra_language"
     }
 }
