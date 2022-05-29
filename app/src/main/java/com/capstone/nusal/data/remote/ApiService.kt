@@ -7,8 +7,6 @@ import retrofit2.http.POST
 
 interface ApiService {
 
-    // TODO: Ganti jadi @Body
-
     @POST("/user/login") // endpoint
     suspend fun userLogin(
         @Body loginRequestBody: LoginRequestBody
