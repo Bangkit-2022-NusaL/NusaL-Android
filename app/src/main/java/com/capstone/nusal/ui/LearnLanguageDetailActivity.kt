@@ -3,10 +3,13 @@ package com.capstone.nusal.ui
 import android.annotation.SuppressLint
 import android.content.ContentValues.TAG
 import android.graphics.Color
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
+import android.view.WindowInsets
+import android.view.WindowManager
 import com.capstone.nusal.R
 import com.capstone.nusal.data.ml.AksaraClassifier
 import com.capstone.nusal.databinding.ActivityLearnLanguageDetailBinding
@@ -24,6 +27,7 @@ class LearnLanguageDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLearnLanguageDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
 
         drawView = binding.drawView
 

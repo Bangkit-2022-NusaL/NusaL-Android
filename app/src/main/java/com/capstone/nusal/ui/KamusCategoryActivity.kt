@@ -1,6 +1,9 @@
 package com.capstone.nusal.ui
 
+import android.os.Build
 import android.os.Bundle
+import android.view.WindowInsets
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.capstone.nusal.R
@@ -17,6 +20,7 @@ class KamusCategoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityKamusCategoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
 
         val categoryTitle = resources.getStringArray(R.array.kamus_kategori_title)
         val categoryImage = resources.getStringArray(R.array.kamus_kategori_image)

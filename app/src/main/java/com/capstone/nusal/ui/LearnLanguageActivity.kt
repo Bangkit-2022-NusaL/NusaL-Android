@@ -1,6 +1,9 @@
 package com.capstone.nusal.ui
 
+import android.os.Build
 import android.os.Bundle
+import android.view.WindowInsets
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.capstone.nusal.R
@@ -16,13 +19,9 @@ class LearnLanguageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLearnLanguageBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        // RecyclerView
+        supportActionBar?.hide()
 
         initContent()
-
-
-
     }
 
     private fun initContent() {
@@ -42,5 +41,4 @@ class LearnLanguageActivity : AppCompatActivity() {
         }
         learnLanguageAdapter.submitList(languageList)
     }
-
 }

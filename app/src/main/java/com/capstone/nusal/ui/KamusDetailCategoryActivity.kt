@@ -1,6 +1,9 @@
 package com.capstone.nusal.ui
 
+import android.os.Build
 import android.os.Bundle
+import android.view.WindowInsets
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.capstone.nusal.databinding.ActivityKamusDetailCategoryBinding
 
@@ -13,6 +16,7 @@ class KamusDetailCategoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityKamusDetailCategoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
 
         // RecyclerView first? then submitList depending on intent?
 
