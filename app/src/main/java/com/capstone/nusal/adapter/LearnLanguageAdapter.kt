@@ -4,6 +4,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.capstone.nusal.data.LearnLanguageModel
@@ -11,7 +12,7 @@ import com.capstone.nusal.databinding.ActivityLearnLanguageBinding
 import com.capstone.nusal.databinding.ItemLearnLanguageBinding
 import com.capstone.nusal.ui.LearnLanguageDetailActivity
 
-class LearnLanguageAdapter: androidx.recyclerview.widget.ListAdapter<LearnLanguageModel, LearnLanguageAdapter.LanguageViewHolder>(DIFF_CALLBACK) {
+class LearnLanguageAdapter: ListAdapter<LearnLanguageModel, LearnLanguageAdapter.LanguageViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LanguageViewHolder {
         val binding = ItemLearnLanguageBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -62,9 +63,5 @@ class LearnLanguageAdapter: androidx.recyclerview.widget.ListAdapter<LearnLangua
             }
         }
     }
-
-
-
-
 }
 
