@@ -11,3 +11,8 @@ data class KamusDetailModel(
     val wordDescription: String
     // and to be added, arti?, perbandingan?
 )
+
+data class LearnLanguageModel(
+    val aksaraName: String,
+//    val aksaraImage: String
+)
