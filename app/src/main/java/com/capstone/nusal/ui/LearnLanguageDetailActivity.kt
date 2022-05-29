@@ -14,7 +14,11 @@ class LearnLanguageDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Get extra item from intent
+        val data = intent.getStringExtra(EXTRA_LANGUAGE)
+
         // Load image and text
+        binding.tvLearnAksaraTitle.text = data
+
 
         binding.imgCanvas.apply {
             isDrawingCacheEnabled = true
