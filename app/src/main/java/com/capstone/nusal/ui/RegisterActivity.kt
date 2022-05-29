@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.core.widget.doOnTextChanged
@@ -106,22 +107,23 @@ class RegisterActivity : AppCompatActivity() {
                     if(result != null) {
                         when(result) {
                             is Result.Loading -> {
-                                // Loading start
+                                binding.pbRegisterLoading.visibility = View.VISIBLE
                             }
                             is Result.Success -> {
-                                // Loading stop
-
+                                binding.pbRegisterLoading.visibility = View.GONE
                                 startActivity(Intent(this@RegisterActivity, LoginActivity::class.java))
                                 Toast.makeText(this@RegisterActivity, "Daftar berhasil, silahkan masuk", Toast.LENGTH_SHORT).show()
                                 finish()
                             }
                             is Result.Error -> {
-                                // Loading stop
+                                binding.pbRegisterLoading.visibility = View.GONE
                                 Toast.makeText(this@RegisterActivity, "Daftar gagal", Toast.LENGTH_SHORT).show()
                             }
                         }
                     }
                 }
+            } else {
+                Toast.makeText(this@RegisterActivity, "Silahkan isi semua data", Toast.LENGTH_SHORT).show()
             }
         }
     }

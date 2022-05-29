@@ -72,4 +72,6 @@ dependencies {
 
     // TFLite
     implementation 'org.tensorflow:tensorflow-lite:2.5.0'
+
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
 }

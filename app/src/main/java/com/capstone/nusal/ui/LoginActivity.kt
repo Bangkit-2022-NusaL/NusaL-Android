@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
@@ -78,11 +79,15 @@ class LoginActivity : AppCompatActivity() {
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 if(fieldLoginPassword.isPasswordComply) {
-                    binding.tilLoginPassword.error = null
-                    binding.tilLoginEmail.isErrorEnabled = false
+                    binding.tilLoginPassword.apply {
+                        error = null
+                        isErrorEnabled = false
+                    }
                 } else {
-                    binding.tilLoginPassword.error = "Password harus minimal 8 karakter"
-                    binding.tilLoginEmail.isErrorEnabled = true
+                    binding.tilLoginPassword.apply {
+                        error = "Password harus minimal 8 karakter"
+                        isErrorEnabled = true
+                    }
                 }
             }
 
@@ -92,43 +97,19 @@ class LoginActivity : AppCompatActivity() {
 
         })
 
-        // TODO: try to observe once (not observe every onclicklistener, resulting multiple observer
-//        loginViewModel.observeLoginResult().observe(this) { result ->
-//            if(result != null) {
-//                when(result) {
-//                    is Result.Loading -> {
-//                        // Show Loading
-//                    }
-//                    is Result.Success -> {
-//                        // Stop loading
-//                        // Save token
-//
-//                        startActivity(Intent(this@LoginActivity, MainActivity::class.java))
-//                        finish()
-//                        Toast.makeText(this@LoginActivity, "Berhasil masuk", Toast.LENGTH_SHORT).show()
-//                    }
-//                    is Result.Error -> {
-//                        // Stop loading
-//                        Toast.makeText(this@LoginActivity, "Masuk gagal", Toast.LENGTH_SHORT).show()
-//                    }
-//                }
-//            }
-//        }
-
         binding.btnLogin.setOnClickListener {
             val loginEmail = binding.edtLoginEmail.text.toString().lowercase()
             val loginPassword = binding.edtLoginPassword.text.toString()
 
             if(loginEmail.isNotEmpty() && loginPassword.isNotEmpty()) {
-//                loginViewModel.userLogin(loginEmail, loginPassword)
                 loginViewModel.userLogin(loginEmail, loginPassword).observe(this) { result ->
                     if(result != null) {
                         when(result) {
                             is Result.Loading -> {
-                                // Show Loading
+                                binding.pbLoginLoading.visibility = View.VISIBLE
                             }
                             is Result.Success -> {
-                                // Stop loading
+                                binding.pbLoginLoading.visibility = View.GONE
                                 val response = result.data
                                 sessionViewModel.saveSession(response.token.toString())
 
@@ -137,12 +118,14 @@ class LoginActivity : AppCompatActivity() {
                                 Toast.makeText(this@LoginActivity, "Berhasil masuk", Toast.LENGTH_SHORT).show()
                             }
                             is Result.Error -> {
-                                // Stop loading
+                                binding.pbLoginLoading.visibility = View.GONE
                                 Toast.makeText(this@LoginActivity, "Masuk gagal", Toast.LENGTH_SHORT).show()
                             }
                         }
                     }
                 }
+            } else {
+                Toast.makeText(this@LoginActivity, "Silahkan isi semua data untuk masuk", Toast.LENGTH_SHORT).show()
             }
         }
 
