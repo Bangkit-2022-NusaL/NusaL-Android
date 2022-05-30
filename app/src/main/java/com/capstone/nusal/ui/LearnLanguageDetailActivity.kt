@@ -1,91 +1,44 @@
 package com.capstone.nusal.ui
 
-import android.annotation.SuppressLint
-import android.content.ContentValues.TAG
-import android.graphics.Color
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.MotionEvent
-import android.view.WindowInsets
-import android.view.WindowManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.capstone.nusal.R
-import com.capstone.nusal.data.ml.AksaraClassifier
+import com.capstone.nusal.adapter.LearnLanguageAdapter
+import com.capstone.nusal.data.LearnLanguageModel
 import com.capstone.nusal.databinding.ActivityLearnLanguageDetailBinding
-import com.capstone.nusal.helper.specifyAksara
-import com.divyanshu.draw.widget.DrawView
 
 class LearnLanguageDetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLearnLanguageDetailBinding
-    private var drawView: DrawView? = null
-    private var aksaraClassifier = AksaraClassifier(this)
 
-    @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLearnLanguageDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
 
-        drawView = binding.drawView
-
-        drawView?.apply {
-            setStrokeWidth(20.0F)
-            setColor(Color.BLACK)
-            setBackgroundColor(Color.WHITE)
-        }
-
-        // Get extra item from intent. TODO: Get link too.
-        val data = intent.getStringExtra(EXTRA_LANGUAGE)
-
-        // Load image and text
-        binding.tvLearnAksaraTitle.text = data
-
-        drawView?.setOnTouchListener { _, motionEvent ->
-            drawView?.onTouchEvent(motionEvent)
-
-            if(motionEvent.action == MotionEvent.ACTION_UP) {
-                classifyDrawing()
-            }
-
-            true
-        }
-
-        binding.btnClearCanvas.setOnClickListener {
-            drawView?.clearCanvas()
-        }
-
-        aksaraClassifier
-            .initialize()
-            .addOnFailureListener { e -> Log.e(TAG, "Error to setting up digit classifier.", e) }
+        // TODO: initContent based on intent.getExtraString language
+        initContent()
     }
 
-    private fun classifyDrawing() {
-        val bitmap = drawView?.getBitmap()
+    private fun initContent() {
+        binding.rvBelajar.layoutManager = LinearLayoutManager(this)
+        val learnLanguageAdapter = LearnLanguageAdapter()
+        binding.rvBelajar.adapter = learnLanguageAdapter
 
-        if ((bitmap != null) && (aksaraClassifier.isInitialized)) {
-            aksaraClassifier
-                .classifyAsync(bitmap)
-                .addOnSuccessListener { result ->
-                    val aksaraResult = specifyAksara(result)
+        val aksaraName = resources.getStringArray(R.array.belajar_aksara_title)
 
-                    if(binding.tvLearnAksaraTitle.text.toString() == aksaraResult) {
-                        binding.tvPrediction.text = "Benar! Anda menulis $aksaraResult"
-                        // TODO: Do something, lock button or what?
-                    } else {
-                        binding.tvPrediction.text = "Tulisan Anda belum cocok"
-                    }
-                }
-                .addOnFailureListener { e ->
-                    binding.tvPrediction.text = "Fail to classify"
-                    Log.e(TAG, "Error classifying drawing.", e)
-                }
+        // still waiting for the image of the aksara, but if the image available just uncomment this line of code below, adapter, and model
+
+//        val aksaraImage = resources.getStringArray(R.array.belajar_aksara_image)
+        val languageList = ArrayList<LearnLanguageModel>()
+
+        for (i in aksaraName.indices) {
+            languageList.add(LearnLanguageModel(aksaraName[i]))
         }
-    }
 
-    companion object {
-        const val EXTRA_LANGUAGE = "extra_language"
+        // TODO: Pindahkan onClick ke sini (Activity) (pakai callback). Buat ngasih info ke next activity buat load model
+        learnLanguageAdapter.submitList(languageList)
     }
 }

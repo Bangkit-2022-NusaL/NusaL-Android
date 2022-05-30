@@ -15,7 +15,7 @@ import java.nio.channels.FileChannel
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
-class AksaraClassifier(private val context: Context) {
+class AksaraClassifier(private val context: Context, private val modelType: String) {
     // TODO: Add a TF Lite interpreter as a field.
     // Interpreter allows you to run .tflite in Android app.
     private var interpreter: Interpreter? = null
@@ -47,14 +47,20 @@ class AksaraClassifier(private val context: Context) {
     private fun initializeInterpreter() {
         // TODO: Load the TF Lite model from file and initialize an interpreter.
         val assetManager = context.assets
-        val model = loadModelFile(assetManager, "converted_model.tflite")
+
+        val model: ByteBuffer = if(modelType == "Jawa") {
+            loadModelFile(assetManager, "Aksara_Jawa" + ".tflite")
+        } else {
+            loadModelFile(assetManager, "Aksara_Sunda" + ".tflite")
+        }
+
         val interpreter = Interpreter(model)
 
         // TODO: Read the model input shape from model file.
         val inputShape = interpreter.getInputTensor(0).shape()
         inputImageWidth = inputShape[1]
         inputImageHeight = inputShape[2]
-        modelInputSize = FLOAT_TYPE_SIZE * inputImageWidth * inputImageHeight * PIXEL_SIZE
+        modelInputSize = FLOAT_TYPE_SIZE * inputImageWidth * inputImageHeight * PIXEL_SIZE * 3
 
         this.interpreter = interpreter
 
@@ -87,7 +93,17 @@ class AksaraClassifier(private val context: Context) {
 
         // DEfine array untuk store model output
         // val output = Array(1) { FloatArray(OUTPUT_CLASSES_COUNT) }
-        val output = Array(1) { FloatArray(OUTPUT_CLASSES_COUNT) }
+        val output: Array<FloatArray> = when(modelType) {
+            "Jawa" -> {
+                Array(1) { FloatArray(OUTPUT_CLASSES_COUNT_JAWA) }
+            }
+            "Sunda" -> {
+                Array(1) { FloatArray(OUTPUT_CLASSES_COUNT_SUNDA) }
+            }
+            else -> {
+                Array(1) { FloatArray(OUTPUT_CLASSES_COUNT_JAWA) }
+            }
+        }
 
         // Run inference with input data
         interpreter?.run(byteBuffer, output)
@@ -95,6 +111,8 @@ class AksaraClassifier(private val context: Context) {
         // Post-processing: find output with highest probability
         val result = output[0]
         val maxIndex = result.indices.maxByOrNull { result[it] } ?: -1
+
+        Log.d(TAG, result.contentToString())
 
         return maxIndex
     }
@@ -110,7 +128,6 @@ class AksaraClassifier(private val context: Context) {
 
     fun close() {
         executorService.execute {
-            // TODO: close the TF Lite interpreter here
             interpreter?.close()
 
             Log.d(TAG, "Closed TFLite interpreter.")
@@ -143,6 +160,7 @@ class AksaraClassifier(private val context: Context) {
         private const val FLOAT_TYPE_SIZE = 4
         private const val PIXEL_SIZE = 1
 
-        private const val OUTPUT_CLASSES_COUNT = 20
+        private const val OUTPUT_CLASSES_COUNT_JAWA = 20
+        private const val OUTPUT_CLASSES_COUNT_SUNDA = 18
     }
 }

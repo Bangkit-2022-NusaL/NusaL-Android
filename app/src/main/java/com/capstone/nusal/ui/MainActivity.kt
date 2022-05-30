@@ -1,10 +1,7 @@
 package com.capstone.nusal.ui
 
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
-import android.view.WindowInsets
-import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.capstone.nusal.data.SessionDataStore
@@ -50,11 +47,17 @@ class MainActivity : AppCompatActivity() {
         // TODO: Logout
 
         binding.cardBelajar.setOnClickListener {
-            startActivity(Intent(this@MainActivity, LearnLanguageActivity::class.java))
+            startActivity(Intent(this@MainActivity, LearnLanguageCategoryActivity::class.java))
         }
 
         binding.cardKamus.setOnClickListener {
-            startActivity(Intent(this@MainActivity, KamusCategoryActivity::class.java))
+            startActivity(Intent(this@MainActivity, KamusLanguageActivity::class.java))
         }
+
+        // Additional notes :
+        // Tingkatan activity
+        // Kamus pages: KamusLanguage (pilih bahsa) -> KamusCategory -> KamusDetail (word and pict) -> KamusWord
+
+        // Learn pages: LanguageCategory(bahasa) -> LanguageDetailCategory -> LanguageAksara
     }
 }

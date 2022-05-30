@@ -6,11 +6,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.capstone.nusal.data.LearnLanguageModel
-import com.capstone.nusal.databinding.ActivityLearnLanguageBinding
 import com.capstone.nusal.databinding.ItemLearnLanguageBinding
-import com.capstone.nusal.ui.LearnLanguageDetailActivity
+import com.capstone.nusal.ui.LearnLanguageAksaraActivity
 
 class LearnLanguageAdapter: ListAdapter<LearnLanguageModel, LearnLanguageAdapter.LanguageViewHolder>(DIFF_CALLBACK) {
 
@@ -37,9 +35,13 @@ class LearnLanguageAdapter: ListAdapter<LearnLanguageModel, LearnLanguageAdapter
 
             binding.tvAksaraName.text = data.aksaraName
 
+            // Pindahkan ke Activity
             itemView.setOnClickListener {
-                val detailLearnLanguage = Intent(itemView.context, LearnLanguageDetailActivity::class.java)
-                detailLearnLanguage.putExtra(LearnLanguageDetailActivity.EXTRA_LANGUAGE, data.aksaraName)
+                val detailLearnLanguage = Intent(itemView.context, LearnLanguageAksaraActivity::class.java)
+                detailLearnLanguage.putExtra(LearnLanguageAksaraActivity.EXTRA_AKSARA, data.aksaraName)
+
+                // Percontohan
+                detailLearnLanguage.putExtra(LearnLanguageAksaraActivity.EXTRA_LANGUAGE, "Jawa")
                 itemView.context.startActivity(detailLearnLanguage)
             }
         }
