@@ -64,7 +64,7 @@ class RegisterActivity : AppCompatActivity() {
                     }
                 } else {
                     binding.tilRegisterEmail.apply {
-                        error = "Email tidak boleh kosong"
+                        error = "Masukkan email dengan format benar"
                         isErrorEnabled = true
                     }
                 }
