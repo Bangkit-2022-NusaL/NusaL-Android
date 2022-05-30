@@ -1,4 +1,4 @@
-package com.capstone.nusal.ui
+package com.capstone.nusal.ui.kamus
 
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity

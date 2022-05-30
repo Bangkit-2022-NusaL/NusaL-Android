@@ -1,9 +1,6 @@
-package com.capstone.nusal.ui
+package com.capstone.nusal.ui.kamus
 
-import android.os.Build
 import android.os.Bundle
-import android.view.WindowInsets
-import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.capstone.nusal.databinding.ActivityKamusDetailCategoryBinding
 

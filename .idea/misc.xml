@@ -13,6 +13,7 @@
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_kamus_detail_category.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_learn_category.xml" value="0.2037037037037037" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_learn_language.xml" value="0.25" />
+        <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_learn_language_category.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_learn_language_detail.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_main.xml" value="0.264" />
@@ -21,6 +22,7 @@
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_splash_screen.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/item_category.xml" value="0.264" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/item_detail_category.xml" value="0.25" />
+        <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/item_learn_language.xml" value="0.20521590423257802" />
       </map>
     </option>
   </component>

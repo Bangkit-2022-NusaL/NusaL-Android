@@ -7,6 +7,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.capstone.nusal.data.SessionDataStore
 import com.capstone.nusal.data.TokenHolder
 import com.capstone.nusal.databinding.ActivityMainBinding
+import com.capstone.nusal.ui.kamus.KamusLanguageActivity
+import com.capstone.nusal.ui.learn.LearnLanguageCategoryActivity
 import com.capstone.nusal.viewmodel.datastore.SessionViewModel
 import com.capstone.nusal.viewmodel.datastore.SessionViewModelFactory
 
@@ -56,7 +58,7 @@ class MainActivity : AppCompatActivity() {
 
         // Additional notes :
         // Tingkatan activity
-        // Kamus pages: KamusLanguage (pilih bahsa) -> KamusCategory -> KamusDetail (word and pict) -> KamusWord
+        // Kamus pages: KamusLanguage (pilih bahasa) -> KamusCategory -> KamusDetail (word and pict) -> KamusWord
 
         // Learn pages: LanguageCategory(bahasa) -> LanguageDetailCategory -> LanguageAksara
     }

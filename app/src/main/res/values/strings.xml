@@ -2,6 +2,16 @@
     <string name="app_name">NusaL</string>
     <string name="category_image">Category Image</string>
 
+    <string-array name="language_choice">
+        <item>Jawa</item>
+        <item>Sunda</item>
+    </string-array>
+
+    <string-array name="language_image">
+        <item></item>
+        <item></item>
+    </string-array>
+
     <string-array name="kamus_kategori_title">
         <item>Tumbuhan</item>
         <item>Hewan</item>
@@ -32,7 +42,7 @@
 
     </string-array>
 
-    <string-array name="belajar_aksara_title">
+    <string-array name="belajar_aksara_jawa_title">
         <item>ba</item>
         <item>ca</item>
         <item>da</item>
@@ -55,7 +65,32 @@
         <item>ya</item>
     </string-array>
 
-    <string-array name="belajar_aksara_image">
+    <string-array name="belajar_aksara_jawa_image">
+
+    </string-array>
+
+    <string-array name="belajar_aksara_sunda_title">
+        <item>ba</item>
+        <item>ca</item>
+        <item>da</item>
+        <item>ga</item>
+        <item>ha</item>
+        <item>ja</item>
+        <item>ka</item>
+        <item>la</item>
+        <item>ma</item>
+        <item>na</item>
+        <item>nga</item>
+        <item>nya</item>
+        <item>pa</item>
+        <item>ra</item>
+        <item>sa</item>
+        <item>ta</item>
+        <item>wa</item>
+        <item>ya</item>
+    </string-array>
+
+    <string-array name="belajar_aksara_sunda_image">
 
     </string-array>
 </resources>

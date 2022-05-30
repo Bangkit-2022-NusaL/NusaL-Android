@@ -16,19 +16,16 @@ import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
 class AksaraClassifier(private val context: Context, private val modelType: String) {
-    // TODO: Add a TF Lite interpreter as a field.
-    // Interpreter allows you to run .tflite in Android app.
     private var interpreter: Interpreter? = null
 
     var isInitialized = false
         private set
 
-    /** Executor to run inference task in the background. */
     private val executorService: ExecutorService = Executors.newCachedThreadPool()
 
-    private var inputImageWidth: Int = 0 // will be inferred from TF Lite model.
-    private var inputImageHeight: Int = 0 // will be inferred from TF Lite model.
-    private var modelInputSize: Int = 0 // will be inferred from TF Lite model.
+    private var inputImageWidth: Int = 0
+    private var inputImageHeight: Int = 0
+    private var modelInputSize: Int = 0
 
     fun initialize(): Task<Void?> {
         val task = TaskCompletionSource<Void?>()
@@ -45,7 +42,6 @@ class AksaraClassifier(private val context: Context, private val modelType: Stri
 
     @Throws(IOException::class)
     private fun initializeInterpreter() {
-        // TODO: Load the TF Lite model from file and initialize an interpreter.
         val assetManager = context.assets
 
         val model: ByteBuffer = if(modelType == "Jawa") {
@@ -56,7 +52,6 @@ class AksaraClassifier(private val context: Context, private val modelType: Stri
 
         val interpreter = Interpreter(model)
 
-        // TODO: Read the model input shape from model file.
         val inputShape = interpreter.getInputTensor(0).shape()
         inputImageWidth = inputShape[1]
         inputImageHeight = inputShape[2]
@@ -81,8 +76,6 @@ class AksaraClassifier(private val context: Context, private val modelType: Stri
     private fun classify(bitmap: Bitmap): Int {
         check(isInitialized) { "TF Lite Interpreter is not initialized yet." }
 
-        // TODO: Add code to run inference with TF Lite.
-        // REsize image sesuai input TFLite
         val resizedImage = Bitmap.createScaledBitmap(
             bitmap,
             inputImageWidth,
@@ -91,7 +84,6 @@ class AksaraClassifier(private val context: Context, private val modelType: Stri
         )
         val byteBuffer = convertBitmapToByteBuffer(resizedImage)
 
-        // DEfine array untuk store model output
         // val output = Array(1) { FloatArray(OUTPUT_CLASSES_COUNT) }
         val output: Array<FloatArray> = when(modelType) {
             "Jawa" -> {

@@ -8,9 +8,15 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.capstone.nusal.data.LearnLanguageModel
 import com.capstone.nusal.databinding.ItemLearnLanguageBinding
-import com.capstone.nusal.ui.LearnLanguageAksaraActivity
+import com.capstone.nusal.ui.learn.LearnLanguageAksaraActivity
 
-class LearnLanguageAdapter: ListAdapter<LearnLanguageModel, LearnLanguageAdapter.LanguageViewHolder>(DIFF_CALLBACK) {
+class LearnLanguageDetailAdapter: ListAdapter<LearnLanguageModel, LearnLanguageDetailAdapter.LanguageViewHolder>(DIFF_CALLBACK) {
+
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LanguageViewHolder {
         val binding = ItemLearnLanguageBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -23,8 +29,9 @@ class LearnLanguageAdapter: ListAdapter<LearnLanguageModel, LearnLanguageAdapter
         if (aksaraItem != null) {
             holder.bind(aksaraItem)
         }
-    }
 
+        holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(aksaraItem)}
+    }
 
     class LanguageViewHolder(private val binding: ItemLearnLanguageBinding) : RecyclerView.ViewHolder(binding.root) {
 
@@ -34,19 +41,12 @@ class LearnLanguageAdapter: ListAdapter<LearnLanguageModel, LearnLanguageAdapter
 //                .into(binding.imgAksara)
 
             binding.tvAksaraName.text = data.aksaraName
-
-            // Pindahkan ke Activity
-            itemView.setOnClickListener {
-                val detailLearnLanguage = Intent(itemView.context, LearnLanguageAksaraActivity::class.java)
-                detailLearnLanguage.putExtra(LearnLanguageAksaraActivity.EXTRA_AKSARA, data.aksaraName)
-
-                // Percontohan
-                detailLearnLanguage.putExtra(LearnLanguageAksaraActivity.EXTRA_LANGUAGE, "Jawa")
-                itemView.context.startActivity(detailLearnLanguage)
-            }
         }
     }
 
+    interface OnItemClickCallback {
+        fun onItemClicked(data: LearnLanguageModel)
+    }
 
     companion object {
         val DIFF_CALLBACK = object : DiffUtil.ItemCallback<LearnLanguageModel>() {

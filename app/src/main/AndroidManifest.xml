@@ -16,32 +16,32 @@
         android:theme="@style/Theme.NusaL"
         tools:targetApi="31">
         <activity
-            android:name=".KamusLanguageActivity"
+            android:name=".ui.kamus.KamusLanguageActivity"
             android:exported="false" />
         <activity
-            android:name=".LearnLanguageCategoryActivity"
+            android:name=".ui.learn.LearnLanguageCategoryActivity"
             android:exported="false" />
         <activity
             android:name=".ui.OnboardingActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.KamusWordActivity"
+            android:name=".ui.kamus.KamusWordActivity"
             android:exported="false"
             android:theme="@style/Theme.NusaL" />
         <activity
-            android:name=".ui.LearnLanguageDetailActivity"
+            android:name=".ui.learn.LearnLanguageDetailActivity"
             android:exported="false"
             android:theme="@style/Theme.NusaL" />
         <activity
-            android:name=".ui.LearnLanguageAksaraActivity"
+            android:name=".ui.learn.LearnLanguageAksaraActivity"
             android:exported="false"
             android:theme="@style/Theme.NusaL" />
         <activity
-            android:name=".ui.KamusDetailCategoryActivity"
+            android:name=".ui.kamus.KamusDetailCategoryActivity"
             android:exported="false"
             android:theme="@style/Theme.NusaL" />
         <activity
-            android:name=".ui.KamusCategoryActivity"
+            android:name=".ui.kamus.KamusCategoryActivity"
             android:exported="false"
             android:theme="@style/Theme.NusaL" />
         <activity

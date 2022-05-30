@@ -1,13 +1,10 @@
-package com.capstone.nusal.ui
+package com.capstone.nusal.ui.kamus
 
-import android.os.Build
 import android.os.Bundle
-import android.view.WindowInsets
-import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.capstone.nusal.R
-import com.capstone.nusal.adapter.CategoryAdapter
+import com.capstone.nusal.adapter.KamusCategoryAdapter
 import com.capstone.nusal.data.CategoryModel
 import com.capstone.nusal.databinding.ActivityKamusCategoryBinding
 
@@ -32,7 +29,7 @@ class KamusCategoryActivity : AppCompatActivity() {
         }
 
         binding.rvCategory.layoutManager = LinearLayoutManager(this)
-        val categoryAdapter = CategoryAdapter()
+        val categoryAdapter = KamusCategoryAdapter()
         binding.rvCategory.adapter = categoryAdapter
 
         categoryAdapter.submitList(categoryList)

@@ -9,15 +9,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.capstone.nusal.data.CategoryModel
 import com.capstone.nusal.databinding.ItemCategoryBinding
-import com.capstone.nusal.ui.KamusDetailCategoryActivity
+import com.capstone.nusal.ui.kamus.KamusDetailCategoryActivity
 
 // Ini dipakai di KamusCategoryActivity
-class CategoryAdapter: ListAdapter<CategoryModel, CategoryAdapter.CategoryViewHolder>(DIFF_CALLBACK) {
+class KamusCategoryAdapter: ListAdapter<CategoryModel, KamusCategoryAdapter.CategoryViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): CategoryAdapter.CategoryViewHolder {
+    ): KamusCategoryAdapter.CategoryViewHolder {
         val binding = ItemCategoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return CategoryViewHolder(binding)
     }
