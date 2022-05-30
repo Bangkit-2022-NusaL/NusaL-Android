@@ -38,6 +38,7 @@ class SessionDataStore private constructor(private val dataStore: DataStore<Pref
     companion object {
         val IS_LOGIN_KEY = booleanPreferencesKey("is_login")
         val TOKEN_KEY = stringPreferencesKey("user_token")
+        val NAME_KEY = stringPreferencesKey("user_name")
 
         @Volatile
         private var INSTANCE: SessionDataStore? = null
