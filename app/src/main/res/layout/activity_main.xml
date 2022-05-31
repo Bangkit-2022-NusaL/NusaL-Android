@@ -25,7 +25,8 @@
         android:textSize="28sp"
         app:layout_constraintBottom_toTopOf="@id/tv_welcome_subtitle"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Selamat datang kembali!" />
+        android:text="Selamat datang kembali!"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/tv_welcome_subtitle"
@@ -66,17 +67,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view_header" />
 
-    <ImageView
-        android:id="@+id/img_nusal_logo"
-        android:layout_width="240dp"
-        android:layout_height="240dp"
-        android:alpha="0.1"
-        android:src="@drawable/nusal"
-        app:layout_constraintBottom_toBottomOf="@id/view_body"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/view_body" />
-
     <TextView
         app:layout_constraintTop_toTopOf="@id/view_body"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +77,8 @@
         android:id="@+id/tv_content_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_marginTop="8dp"
@@ -113,7 +104,6 @@
                 android:id="@+id/img_learn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:src="@drawable/kategori_tumbuhan"
                 android:scaleType="centerCrop"
                 android:adjustViewBounds="true" />
 
