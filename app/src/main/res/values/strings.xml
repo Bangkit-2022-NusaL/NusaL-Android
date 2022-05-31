@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">NusaL</string>
     <string name="category_image">Category Image</string>
+    <string name="selamat_datang_kembali">Selamat datang kembali!</string>
+    <string name="apa_yang_hari_ini_kamu_ingin_lakukan">Apa yang hari ini kamu ingin lakukan?</string>
+    <string name="keluar">Keluar</string>
+    <string name="background_logo_aplikasi">Background logo Aplikasi</string>
+    <string name="mari_latih_menulis_aksara_mu">Mari latih menulis aksara-mu</string>
 
     <string-array name="language_choice">
         <item>Jawa</item>
