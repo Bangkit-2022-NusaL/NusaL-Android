@@ -69,18 +69,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view_header" />
 
-    <ImageView
-        android:contentDescription="@string/background_logo_aplikasi"
-        android:id="@+id/img_nusal_logo"
-        android:layout_width="240dp"
-        android:layout_height="240dp"
-        android:alpha="0.1"
-        android:src="@drawable/nusal"
-        app:layout_constraintBottom_toBottomOf="@id/view_body"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/view_body" />
-
     <TextView
         app:layout_constraintTop_toTopOf="@id/view_body"
         app:layout_constraintStart_toStartOf="parent"
