@@ -7,8 +7,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.capstone.nusal.data.SessionDataStore
 import com.capstone.nusal.data.TokenHolder
 import com.capstone.nusal.databinding.ActivityMainBinding
-import com.capstone.nusal.ui.kamus.KamusLanguageActivity
-import com.capstone.nusal.ui.learn.LearnLanguageCategoryActivity
 import com.capstone.nusal.viewmodel.datastore.SessionViewModel
 import com.capstone.nusal.viewmodel.datastore.SessionViewModelFactory
 
@@ -24,10 +22,11 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         val session = SessionDataStore.getInstance(dataStore)
-        val sessionViewModel = ViewModelProvider(this, SessionViewModelFactory(session))[SessionViewModel::class.java]
+        val sessionViewModel =
+            ViewModelProvider(this, SessionViewModelFactory(session))[SessionViewModel::class.java]
 
         sessionViewModel.getToken().observe(this) { token ->
-            if(token.isNotEmpty()) {
+            if (token.isNotEmpty()) {
                 TokenHolder.token = token
             } else {
                 TokenHolder.token = null
@@ -35,8 +34,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         sessionViewModel.isLogin().observe(this) { isLogin ->
-            if(isLogin) {
-                if(TokenHolder.token != null) {
+            if (isLogin) {
+                if (TokenHolder.token != null) {
                     // continue
                 }
             } else {
@@ -48,18 +47,24 @@ class MainActivity : AppCompatActivity() {
 
         // TODO: Logout
 
-        binding.cardBelajar.setOnClickListener {
-            startActivity(Intent(this@MainActivity, LearnLanguageCategoryActivity::class.java))
+        binding.btnLogout.setOnClickListener {
+            sessionViewModel.clearSession()
+            startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+            finish()
         }
 
-        binding.cardKamus.setOnClickListener {
-            startActivity(Intent(this@MainActivity, KamusLanguageActivity::class.java))
-        }
-
-        // Additional notes :
-        // Tingkatan activity
-        // Kamus pages: KamusLanguage (pilih bahasa) -> KamusCategory -> KamusDetail (word and pict) -> KamusWord
-
-        // Learn pages: LanguageCategory(bahasa) -> LanguageDetailCategory -> LanguageAksara
+//        binding.cardBelajar.setOnClickListener {
+//            startActivity(Intent(this@MainActivity, LearnLanguageCategoryActivity::class.java))
+//        }
+//
+//        binding.cardKamus.setOnClickListener {
+//            startActivity(Intent(this@MainActivity, KamusLanguageActivity::class.java))
     }
+
+    // Additional notes :
+    // Tingkatan activity
+    // Kamus pages: KamusLanguage (pilih bahasa) -> KamusCategory -> KamusDetail (word and pict) -> KamusWord
+
+    // Learn pages: LanguageCategory(bahasa) -> LanguageDetailCategory -> LanguageAksara
 }
+

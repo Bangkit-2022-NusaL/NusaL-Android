@@ -25,7 +25,7 @@
         android:textSize="28sp"
         app:layout_constraintBottom_toTopOf="@id/tv_welcome_subtitle"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Selamat datang kembali!" />
+        android:text="@string/selamat_datang_kembali" />
 
     <TextView
         android:id="@+id/tv_welcome_subtitle"
@@ -37,16 +37,17 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@id/view_header"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Apa yang hari ini kamu ingin lakukan?"
+        android:text="@string/apa_yang_hari_ini_kamu_ingin_lakukan"
         android:textSize="16sp"/>
 
     <com.google.android.material.button.MaterialButton
         style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/btn_logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Keluar"
+        android:text="@string/keluar"
         android:textColor="@color/white"
         android:textSize="14sp"
         app:cornerRadius="10dp"
@@ -67,6 +68,7 @@
         app:layout_constraintTop_toBottomOf="@id/view_header" />
 
     <ImageView
+        android:contentDescription="@string/background_logo_aplikasi"
         android:id="@+id/img_nusal_logo"
         android:layout_width="240dp"
         android:layout_height="240dp"
@@ -82,7 +84,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Mari latih menulis aksara-mu"
+        android:text="@string/mari_latih_menulis_aksara_mu"
         android:textSize="24sp"
         android:id="@+id/tv_content_header"
         android:layout_width="wrap_content"
