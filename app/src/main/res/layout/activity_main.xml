@@ -141,7 +141,7 @@
             <TextView
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/img_logo_belajar_aksara"
-                android:text="Belajar Menulis Aksara"
+                android:text="@string/belajar_menulis_aksara"
                 android:textColor="@color/white_200"
                 android:textSize="24sp"
                 android:layout_marginStart="8dp"
