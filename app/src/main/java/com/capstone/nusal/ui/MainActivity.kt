@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.capstone.nusal.data.SessionDataStore
 import com.capstone.nusal.data.TokenHolder
 import com.capstone.nusal.databinding.ActivityMainBinding
+import com.capstone.nusal.ui.learn.LearnLanguageCategoryActivity
 import com.capstone.nusal.viewmodel.datastore.SessionViewModel
 import com.capstone.nusal.viewmodel.datastore.SessionViewModelFactory
 
@@ -53,9 +54,9 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
 
-//        binding.cardBelajar.setOnClickListener {
-//            startActivity(Intent(this@MainActivity, LearnLanguageCategoryActivity::class.java))
-//        }
+        binding.cardBelajar.setOnClickListener {
+            startActivity(Intent(this@MainActivity, LearnLanguageCategoryActivity::class.java))
+        }
 //
 //        binding.cardKamus.setOnClickListener {
 //            startActivity(Intent(this@MainActivity, KamusLanguageActivity::class.java))

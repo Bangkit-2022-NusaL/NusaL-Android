@@ -15,6 +15,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        app:layout_constraintTop_toTopOf="@id/view_header"
+        app:layout_constraintStart_toStartOf="@id/view_header"
+        app:layout_constraintEnd_toEndOf="@id/view_header"
+        app:layout_constraintBottom_toBottomOf="@id/view_header"
+        android:src="@drawable/ic_flag_map_of_indonesia"
+        android:layout_width="360dp"
+        android:layout_height="160dp" />
+
     <TextView
         android:id="@+id/tv_welcome_header"
         android:layout_width="wrap_content"
@@ -27,7 +36,6 @@
         app:layout_constraintStart_toStartOf="parent"
         android:text="Selamat datang kembali!"
         android:textStyle="bold"/>
-
 
     <TextView
         android:id="@+id/tv_welcome_subtitle"
@@ -83,6 +91,7 @@
         android:textStyle="bold"/>
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_belajar"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@id/tv_content_header"
         app:layout_constraintStart_toStartOf="parent"
