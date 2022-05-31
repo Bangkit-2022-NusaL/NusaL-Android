@@ -58,12 +58,12 @@ class MainActivity : AppCompatActivity() {
         }
 //
 //        binding.cardKamus.setOnClickListener {
-//            startActivity(Intent(this@MainActivity, KamusLanguageActivity::class.java))
+//            startActivity(Intent(this@MainActivity, KamusCategoryActivity::class.java))
     }
 
     // Additional notes :
     // Tingkatan activity
-    // Kamus pages: KamusLanguage (pilih bahasa) -> KamusCategory -> KamusDetail (word and pict) -> KamusWord
+    // Kamus pages:  KamusCategory -> KamusDetail (word and pict) -> KamusWord
 
     // Learn pages: LanguageCategory(bahasa) -> LanguageDetailCategory -> LanguageAksara
 }

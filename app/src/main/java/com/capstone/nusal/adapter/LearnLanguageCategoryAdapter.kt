@@ -10,13 +10,15 @@ import com.bumptech.glide.Glide
 import com.capstone.nusal.data.CategoryModel
 import com.capstone.nusal.data.LearnLanguageModel
 import com.capstone.nusal.databinding.ItemCategoryBinding
+import com.capstone.nusal.databinding.ItemLearnLanguageBinding
+import com.capstone.nusal.databinding.ItemLearnLanguageCategoryBinding
 import com.capstone.nusal.ui.learn.LearnLanguageAksaraActivity
 import com.capstone.nusal.ui.learn.LearnLanguageDetailActivity
 
 class LearnLanguageCategoryAdapter: ListAdapter<CategoryModel, LearnLanguageCategoryAdapter.LanguageCategoryViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LanguageCategoryViewHolder {
-        val binding = ItemCategoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemLearnLanguageCategoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return LanguageCategoryViewHolder(binding)
     }
 
@@ -28,18 +30,18 @@ class LearnLanguageCategoryAdapter: ListAdapter<CategoryModel, LearnLanguageCate
         }
     }
 
-    class LanguageCategoryViewHolder(private val binding: ItemCategoryBinding) : RecyclerView.ViewHolder(binding.root) {
+    class LanguageCategoryViewHolder(private val binding: ItemLearnLanguageCategoryBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(data: CategoryModel) {
             Glide.with(itemView.context)
                 .load(data.categoryImage)
-                .into(binding.imgCategory)
+                .into(binding.imgLanguage)
 
-            binding.tvCategoryName.text = data.categoryName
+            binding.tvLanguageTitle.text = data.categoryName
 
             itemView.setOnClickListener {
                 val detailLearnLanguage = Intent(itemView.context, LearnLanguageDetailActivity::class.java)
-                detailLearnLanguage.putExtra(LearnLanguageAksaraActivity.EXTRA_LANGUAGE, binding.tvCategoryName.text.toString())
+                detailLearnLanguage.putExtra(LearnLanguageAksaraActivity.EXTRA_LANGUAGE, binding.tvLanguageTitle.text.toString())
                 itemView.context.startActivity(detailLearnLanguage)
             }
         }

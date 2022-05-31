@@ -2,6 +2,7 @@ package com.capstone.nusal.ui.learn
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.capstone.nusal.R
 import com.capstone.nusal.adapter.KamusCategoryAdapter
@@ -20,7 +21,7 @@ class LearnLanguageCategoryActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.hide()
 
-        binding.rvLanguageCategory.layoutManager = LinearLayoutManager(this)
+        binding.rvLanguageCategory.layoutManager = GridLayoutManager(this, 2)
         val rvAdapter = LearnLanguageCategoryAdapter()
         binding.rvLanguageCategory.adapter = rvAdapter
 

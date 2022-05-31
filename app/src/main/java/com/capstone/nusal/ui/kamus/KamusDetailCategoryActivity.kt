@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.capstone.nusal.databinding.ActivityKamusDetailCategoryBinding
 
-// Detail kategori, berisi contoh kata (kucing, anjing, sapi, dsb.)
+// Berisi kata2 dan foto
 class KamusDetailCategoryActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityKamusDetailCategoryBinding
@@ -15,17 +15,8 @@ class KamusDetailCategoryActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.hide()
 
-        // RecyclerView first? then submitList depending on intent?
+        // RecyclerView TBD
 
-        // Get Intent
-        when(intent.getStringExtra(EXTRA_CATEGORY)) {
-            "Tumbuhan" -> {
-                // fetch tumbuhan strings, AND also take its all description (for intent). and submit list
-            }
-            "Hewan" -> {
-                // fetch hewan strings and submit list
-            }
-        }
     }
 
     companion object {

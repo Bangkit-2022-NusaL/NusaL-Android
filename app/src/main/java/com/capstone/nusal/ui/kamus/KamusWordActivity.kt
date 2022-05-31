@@ -8,7 +8,7 @@ import android.view.WindowManager
 import com.capstone.nusal.R
 import com.capstone.nusal.databinding.ActivityKamusWordBinding
 
-// Activity untuk arti dari kata tersebut (sapi adalah ..., bahasa jawabnya ..., gambar...)
+// Kata: Foto, kata Indonesia, kata daerah
 class KamusWordActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityKamusWordBinding

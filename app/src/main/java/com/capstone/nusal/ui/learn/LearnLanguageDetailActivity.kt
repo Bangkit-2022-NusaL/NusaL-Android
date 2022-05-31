@@ -3,6 +3,7 @@ package com.capstone.nusal.ui.learn
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.capstone.nusal.R
 import com.capstone.nusal.adapter.LearnLanguageDetailAdapter
@@ -24,7 +25,7 @@ class LearnLanguageDetailActivity : AppCompatActivity() {
     }
 
     private fun initContent(extraLanguage: String) {
-        binding.rvBelajar.layoutManager = LinearLayoutManager(this)
+        binding.rvBelajar.layoutManager = GridLayoutManager(this, 2)
         val learnLanguageAdapter = LearnLanguageDetailAdapter()
         binding.rvBelajar.adapter = learnLanguageAdapter
 

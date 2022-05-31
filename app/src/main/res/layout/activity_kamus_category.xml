@@ -8,10 +8,10 @@
 
     <TextView
         android:id="@+id/tv_category_header"
-        android:text="Kategori"
+        android:text="Pilih Bahasa Kamus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="40sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"

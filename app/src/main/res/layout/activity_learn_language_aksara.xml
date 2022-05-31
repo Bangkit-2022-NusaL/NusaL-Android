@@ -26,8 +26,8 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_height="200dp"
-                android:layout_width="200dp"
+                android:layout_height="140dp"
+                android:layout_width="140dp"
                 tools:src="@tools:sample/avatars"/>
 
             <TextView
@@ -51,13 +51,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="28dp"
-        android:layout_width="210dp"
-        android:layout_height="210dp"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
         app:cardBackgroundColor="@color/black_200"/>
 
     <com.divyanshu.draw.widget.DrawView
         android:id="@+id/draw_view"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="0dp"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintTop_toBottomOf="@id/card_meaning"
