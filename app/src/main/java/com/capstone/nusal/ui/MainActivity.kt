@@ -50,8 +50,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnLogout.setOnClickListener {
             sessionViewModel.clearSession()
-            startActivity(Intent(this@MainActivity, LoginActivity::class.java))
-            finish()
+            // Add AlertDialog
         }
 
         binding.cardBelajar.setOnClickListener {

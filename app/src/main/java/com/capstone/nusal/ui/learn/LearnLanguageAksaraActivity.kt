@@ -54,7 +54,7 @@ class LearnLanguageAksaraActivity : AppCompatActivity() {
             drawView?.onTouchEvent(motionEvent)
 
             if(motionEvent.action == MotionEvent.ACTION_UP) {
-                classifyDrawing() // TODO: Change this into button action.
+                classifyDrawing() // TODO: Change this into button action. Disable after click, able after success
             }
 
             true

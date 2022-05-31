@@ -46,7 +46,7 @@ class AksaraClassifier(private val context: Context, private val modelType: Stri
 
         val model: ByteBuffer = if(modelType == "Jawa") {
             loadModelFile(assetManager, "Aksara_Jawa" + ".tflite")
-        } else {
+        } else { // TODO: Switch Case
             loadModelFile(assetManager, "Aksara_Sunda" + ".tflite")
         }
 
@@ -55,7 +55,7 @@ class AksaraClassifier(private val context: Context, private val modelType: Stri
         val inputShape = interpreter.getInputTensor(0).shape()
         inputImageWidth = inputShape[1]
         inputImageHeight = inputShape[2]
-        modelInputSize = FLOAT_TYPE_SIZE * inputImageWidth * inputImageHeight * PIXEL_SIZE * 3
+        modelInputSize = FLOAT_TYPE_SIZE * inputImageWidth * inputImageHeight * PIXEL_SIZE
 
         this.interpreter = interpreter
 
