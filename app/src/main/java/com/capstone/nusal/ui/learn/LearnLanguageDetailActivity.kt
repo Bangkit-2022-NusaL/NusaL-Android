@@ -34,7 +34,7 @@ class LearnLanguageDetailActivity : AppCompatActivity() {
                 override fun onItemClicked(data: LearnLanguageModel) {
                     val detailLearnLanguage = Intent(this@LearnLanguageDetailActivity, LearnLanguageAksaraActivity::class.java)
                     detailLearnLanguage.putExtra(LearnLanguageAksaraActivity.EXTRA_AKSARA, data.aksaraName)
-                    // detailLearnLanguage.putExtra(LearnLanguageAksaraActivity.EXTRA_AKSARA_IMG, data.aksaraImg)
+                    detailLearnLanguage.putExtra(LearnLanguageAksaraActivity.EXTRA_AKSARA_IMG, data.aksaraImage)
 
                     detailLearnLanguage.putExtra(LearnLanguageAksaraActivity.EXTRA_LANGUAGE, extraLanguage)
                     startActivity(detailLearnLanguage)
@@ -42,20 +42,20 @@ class LearnLanguageDetailActivity : AppCompatActivity() {
             })
 
         var aksaraNameList = arrayOf<String>()
-        // var aksaraImgList = arrayOf<String>()
+        var aksaraImgList = arrayOf<String>()
 
         if(extraLanguage == "Jawa") {
             aksaraNameList = resources.getStringArray(R.array.belajar_aksara_jawa_title)
-            // aksaraImgList = resources.getStringArray(R.array.belajar_aksara_jawa_image)
+            aksaraImgList = resources.getStringArray(R.array.belajar_aksara_jawa_image)
         } else if (extraLanguage == "Sunda"){
             aksaraNameList = resources.getStringArray(R.array.belajar_aksara_sunda_title)
-            // aksaraImgList = resources.getStringArray(R.array.belajar_aksara_sunda_image)
+            aksaraImgList = resources.getStringArray(R.array.belajar_aksara_sunda_image)
         }
 
         val languageList = ArrayList<LearnLanguageModel>()
 
         for (i in aksaraNameList.indices) {
-            languageList.add(LearnLanguageModel(aksaraNameList[i])) // Not yet image
+            languageList.add(LearnLanguageModel(aksaraNameList[i], aksaraImgList[i]))
         }
 
         learnLanguageAdapter.submitList(languageList)

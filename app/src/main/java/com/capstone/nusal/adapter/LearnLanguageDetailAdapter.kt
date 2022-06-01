@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.capstone.nusal.data.LearnLanguageModel
 import com.capstone.nusal.databinding.ItemLearnLanguageBinding
 import com.capstone.nusal.databinding.ItemLearnLanguageCategoryBinding
@@ -37,9 +38,9 @@ class LearnLanguageDetailAdapter: ListAdapter<LearnLanguageModel, LearnLanguageD
     class LanguageViewHolder(private val binding: ItemLearnLanguageCategoryBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(data: LearnLanguageModel) {
-//            Glide.with(itemView.context)
-//                .load(data.aksaraImage)
-//                .into(binding.imgAksara)
+            Glide.with(itemView.context)
+                .load(data.aksaraImage)
+                .into(binding.imgLanguage)
 
             binding.tvLanguageTitle.text = data.aksaraName
         }

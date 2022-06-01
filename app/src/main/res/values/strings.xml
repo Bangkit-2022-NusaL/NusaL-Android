@@ -72,7 +72,26 @@
     </string-array>
 
     <string-array name="belajar_aksara_jawa_image">
-
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Jawa/ba.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Jawa/ca.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Jawa/da.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Jawa/dha.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Jawa/ga.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Jawa/ha.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Jawa/ja.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Jawa/ka.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Jawa/la.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Jawa/ma.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Jawa/na.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Jawa/nga.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Jawa/nya.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Jawa/pa.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Jawa/ra.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Jawa/sa.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Jawa/ta.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Jawa/tha.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Jawa/wa.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Jawa/ya.png</item>
     </string-array>
 
     <string-array name="belajar_aksara_sunda_title">
@@ -97,6 +116,23 @@
     </string-array>
 
     <string-array name="belajar_aksara_sunda_image">
-
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/ba.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/ca.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/da.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/ga.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/ha.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/ja.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/ka.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/la.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/ma.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/na.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/nga.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/nya.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/pa.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/ra.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/sa.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/ta.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/wa.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/ya.png</item>
     </string-array>
 </resources>

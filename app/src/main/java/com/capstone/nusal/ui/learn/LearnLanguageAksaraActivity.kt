@@ -1,15 +1,21 @@
 package com.capstone.nusal.ui.learn
 
 import android.annotation.SuppressLint
+import android.app.Dialog
 import android.content.ContentValues.TAG
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.MotionEvent
+import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
+import com.capstone.nusal.R
 import com.capstone.nusal.data.ml.AksaraClassifier
 import com.capstone.nusal.databinding.ActivityLearnLanguageAksaraBinding
+import com.capstone.nusal.databinding.AksaraPopupFailureBinding
+import com.capstone.nusal.databinding.AksaraPopupSuccessBinding
 import com.capstone.nusal.helper.specifyAksara
 import com.divyanshu.draw.widget.DrawView
 
@@ -19,13 +25,20 @@ class LearnLanguageAksaraActivity : AppCompatActivity() {
     private var drawView: DrawView? = null
     private lateinit var aksaraClassifier: AksaraClassifier
 
+    private lateinit var successPopupBinding: AksaraPopupSuccessBinding
+    private lateinit var failurePopupBinding: AksaraPopupFailureBinding
+
+    private lateinit var successPopup: Dialog
+    private lateinit var failurePopup: Dialog
+
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLearnLanguageAksaraBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Intent get extra, is it Javanese or Sundanese
+        initDialog()
+
         val languageType = intent.getStringExtra(EXTRA_LANGUAGE)
 
         aksaraClassifier = AksaraClassifier(this, languageType.toString())
@@ -41,11 +54,11 @@ class LearnLanguageAksaraActivity : AppCompatActivity() {
         }
 
         val extraAksara = intent.getStringExtra(EXTRA_AKSARA)
-//        val extraAksaraImg = intent.getStringExtra(EXTRA_AKSARA_IMG)
-//
-//        Glide.with(this)
-//            .load(extraAksaraImg)
-//            .into(binding.imgLearnAksara)
+        val extraAksaraImg = intent.getStringExtra(EXTRA_AKSARA_IMG)
+
+        Glide.with(this)
+            .load(extraAksaraImg)
+            .into(binding.imgLearnAksara)
 
         binding.tvLearnAksaraTitle.text = extraAksara
 
@@ -53,11 +66,12 @@ class LearnLanguageAksaraActivity : AppCompatActivity() {
         drawView?.setOnTouchListener { _, motionEvent ->
             drawView?.onTouchEvent(motionEvent)
 
-            if(motionEvent.action == MotionEvent.ACTION_UP) {
-                classifyDrawing() // TODO: Change this into button action. Disable after click, able after success
-            }
-
             true
+        }
+
+        binding.btnCheckAksara.setOnClickListener {
+            classifyDrawing()
+            binding.btnCheckAksara.isEnabled = false
         }
 
         binding.btnClearCanvas.setOnClickListener {
@@ -79,20 +93,59 @@ class LearnLanguageAksaraActivity : AppCompatActivity() {
                 .addOnSuccessListener { result ->
                     val aksaraResult = specifyAksara(result, intent.getStringExtra(EXTRA_LANGUAGE).toString())
 
-                    Log.d(TAG, aksaraResult.toString())
-
                     if(binding.tvLearnAksaraTitle.text.toString() == aksaraResult) {
-                        binding.tvPrediction.text = "$aksaraResult" // "Benar! Anda menulis $aksaraResult"
-                        // TODO: Do something, lock button or what?
+                        setSuccessDialogContent(aksaraResult)
+                        successPopup.show()
                     } else {
-                        binding.tvPrediction.text = "Tulisan Anda belum benar"
+                        failurePopup.show()
                     }
+
+                    binding.btnCheckAksara.isEnabled = true
                 }
                 .addOnFailureListener { e ->
                     binding.tvPrediction.text = "Fail to classify"
                     Log.e(TAG, "Error classifying drawing.", e)
+                    binding.btnCheckAksara.isEnabled = true
                 }
         }
+    }
+
+    private fun initDialog() {
+        successPopupBinding = AksaraPopupSuccessBinding.inflate(LayoutInflater.from(applicationContext))
+        failurePopupBinding = AksaraPopupFailureBinding.inflate(LayoutInflater.from(applicationContext))
+
+        successPopup = Dialog(this)
+        failurePopup = Dialog(this)
+
+        successPopup.apply {
+            requestWindowFeature(Window.FEATURE_NO_TITLE)
+            setContentView(successPopupBinding.root)
+            setCancelable(true)
+        }
+
+        failurePopup.apply {
+            requestWindowFeature(Window.FEATURE_NO_TITLE)
+            setContentView(failurePopupBinding.root)
+            setCancelable(true)
+        }
+
+        successPopupBinding.btnBack.setOnClickListener {
+            finish()
+        }
+
+        successPopupBinding.btnTryAgain.setOnClickListener {
+            successPopup.dismiss()
+            drawView?.clearCanvas()
+        }
+
+        failurePopupBinding.btnTryAgain.setOnClickListener {
+            failurePopup.dismiss()
+        }
+    }
+
+    private fun setSuccessDialogContent(aksara: String) {
+        // change to getstring later
+        successPopupBinding.tvCongrats.text = "Selamat! Anda berhasil menulis aksara $aksara dengan benar!"
     }
 
     override fun onDestroy() {

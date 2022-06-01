@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/drawable/category_linear_gradient.xml" value="0.1" />
+        <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/drawable/ic_baseline_check_circle_outline_24.xml" value="0.1" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/drawable/ic_baseline_logout_24.xml" value="0.1235" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/drawable/ic_flag_map_of_indonesia.xml" value="0.192" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/drawable/linear_gradient_angle0.xml" value="0.1235" />
@@ -19,7 +20,7 @@
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_kamus_word.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_learn_category.xml" value="0.2037037037037037" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_learn_language.xml" value="0.25" />
-        <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_learn_language_aksara.xml" value="0.11741093828399397" />
+        <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_learn_language_aksara.xml" value="0.176" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_learn_language_category.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_learn_language_detail.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_login.xml" value="0.264" />
@@ -27,6 +28,8 @@
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_onboarding.xml" value="0.20478837109876016" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_splash_screen.xml" value="0.20521590423257802" />
+        <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/aksara_popup_failure.xml" value="0.20521590423257802" />
+        <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/aksara_popup_success.xml" value="0.2" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/item_aksara.xml" value="0.1875" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/item_category.xml" value="0.264" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/item_detail_category.xml" value="0.25" />

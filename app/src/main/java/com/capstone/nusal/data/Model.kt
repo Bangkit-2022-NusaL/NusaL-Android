@@ -14,5 +14,5 @@ data class KamusDetailModel(
 
 data class LearnLanguageModel(
     val aksaraName: String,
-//    val aksaraImage: String
+    val aksaraImage: String
 )
