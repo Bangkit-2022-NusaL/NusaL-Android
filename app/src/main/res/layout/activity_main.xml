@@ -6,14 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
-    <View
-        android:id="@+id/view_header"
-        android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:background="@color/black_200"
-        app:layout_constraintEnd_toEndOf="parent"
+    <FrameLayout
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/frame_header"
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+
+        <View
+            android:id="@+id/view_header"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@drawable/batik_motif"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:translationZ="2dp"
+            android:background="@color/black_200"
+            android:alpha="0.65"
+            android:layout_width="match_parent"
+            android:layout_height="160dp" />
+
+    </FrameLayout>
 
     <TextView
         android:id="@+id/tv_welcome_header"
@@ -26,7 +46,8 @@
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/tv_welcome_subtitle"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:translationZ="3dp"/>
 
     <TextView
         android:id="@+id/tv_welcome_subtitle"
@@ -38,26 +59,29 @@
         android:text="@string/apa_yang_hari_ini_kamu_ingin_lakukan"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/view_header"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@id/frame_header"
+        app:layout_constraintStart_toStartOf="parent"
+        android:translationZ="3dp"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_logout"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/keluar"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        app:cornerRadius="10dp"
-        app:icon="@drawable/ic_baseline_logout_24"
-        app:iconSize="24dp"
-        app:iconTint="@color/white"
+    <androidx.cardview.widget.CardView
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:strokeColor="@color/white" />
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@android:color/transparent"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp">
+
+        <ImageView
+            android:id="@+id/btn_logout"
+            android:src="@drawable/ic_baseline_logout_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+    </androidx.cardview.widget.CardView>
 
     <View
         android:id="@+id/view_body"
@@ -66,7 +90,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_header" />
+        app:layout_constraintTop_toBottomOf="@id/frame_header" />
 
     <TextView
         android:id="@+id/tv_content_header"
@@ -76,7 +100,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/mari_latih_menulis_aksara_mu"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/view_body" />
@@ -104,7 +128,7 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
-                android:src="@drawable/aksara"
+                android:src="@drawable/writing_illust"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
