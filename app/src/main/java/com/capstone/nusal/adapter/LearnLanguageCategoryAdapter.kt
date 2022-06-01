@@ -8,9 +8,6 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.capstone.nusal.data.CategoryModel
-import com.capstone.nusal.data.LearnLanguageModel
-import com.capstone.nusal.databinding.ItemCategoryBinding
-import com.capstone.nusal.databinding.ItemLearnLanguageBinding
 import com.capstone.nusal.databinding.ItemLearnLanguageCategoryBinding
 import com.capstone.nusal.ui.learn.LearnLanguageAksaraActivity
 import com.capstone.nusal.ui.learn.LearnLanguageDetailActivity

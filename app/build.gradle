@@ -15,8 +15,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        // TODO: Change if needed (this is still on development)
-        buildConfigField 'String', 'REMOTE_API_URL', '"https://nusal-api-test.herokuapp.com/"'
+        buildConfigField 'String', 'REMOTE_API_URL', '"https://nusal-352008.et.r.appspot.com/"'
     }
 
     buildTypes {

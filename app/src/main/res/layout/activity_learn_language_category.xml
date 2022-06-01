@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.learn.LearnLanguageCategoryActivity">
 
-
-
     <TextView
         android:id="@+id/tv_learn_category_header"
         android:text="Pilih Bahasa Aksara"
@@ -30,10 +28,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:id="@+id/rv_language_category"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        tools:listitem="@layout/item_learn_language_category"
-        app:spanCount="2"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+        tools:listitem="@layout/item_learn_language_category" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

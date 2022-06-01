@@ -18,39 +18,11 @@
     </string-array>
 
     <string-array name="language_image">
-        <item></item>
-        <item></item>
+        <item>https://storage.googleapis.com/nusal_resource/banner/bannerJawa.png</item>
+        <item>https://storage.googleapis.com/nusal_resource/banner/bannerSunda.png</item>
     </string-array>
 
-    <string-array name="kamus_kategori_title">
-        <item>Tumbuhan</item>
-        <item>Hewan</item>
-        <item>Makanan</item>
-        <item>Benda</item>
-    </string-array>
-
-    <string-array name="kamus_kategori_image">
-        <item>https://cdn0-production-images-kly.akamaized.net/eIN8zSf1znHEid3V_nYi2NowfQ0=/1200x1200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/842400/original/040901200_1427968460-green_nature_plant_macro_seed_hd_wallpaper.jpg</item>
-        <item>https://images.bisnis-cdn.com/posts/2021/08/30/1435845/cheetah.jpg</item>
-        <item>https://media.suara.com/pictures/970x544/2021/09/24/61923-ilustrasi-makanan-indonesia-pixabayzapaceh6350.jpg</item>
-        <item>https://image-cdn.medkomtek.com/Kza0MUz3wf3-gMBOjEAOspGwWyc=/1200x675/smart/klikdokter-media-buckets/medias/2235774/original/000349600_1527968024-Jaga-Diri-Anda-dengan-5-Benda-Pelindung-Kesehatan-Ini-By-jakkapan-shutterstock.jpg</item>
-    </string-array>
-
-    <string-array name="kamus_detail_title">
-
-    </string-array>
-
-    <string-array name="kamus_detail_image">
-
-    </string-array>
-
-    <string-array name="kamus_detail_arti">
-
-    </string-array>
-
-    <string-array name="kamus_detail_deskripsi">
-
-    </string-array>
+    <!-- Buat list kata jawa, image, dan arti indonesia-->
 
     <string-array name="belajar_aksara_jawa_title">
         <item>ba</item>

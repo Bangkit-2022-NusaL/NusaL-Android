@@ -115,7 +115,6 @@ class RegisterActivity : AppCompatActivity() {
                             }
                             is Result.Success -> {
                                 binding.pbRegisterLoading.visibility = View.GONE
-                                startActivity(Intent(this@RegisterActivity, LoginActivity::class.java))
                                 Toast.makeText(this@RegisterActivity, "Daftar berhasil, silahkan masuk", Toast.LENGTH_SHORT).show()
                                 finish()
                             }

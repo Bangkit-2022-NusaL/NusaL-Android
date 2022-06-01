@@ -20,20 +20,5 @@ class KamusCategoryActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         // Using item and adapter TBD
-
-//        val categoryTitle = resources.getStringArray(R.array.kamus_kategori_title)
-//        val categoryImage = resources.getStringArray(R.array.kamus_kategori_image)
-//
-//        val categoryList = ArrayList<CategoryModel>()
-//
-//        for(i in categoryTitle.indices) {
-//            categoryList.add(CategoryModel(categoryTitle[i], categoryImage[i]))
-//        }
-//
-//        binding.rvCategory.layoutManager = LinearLayoutManager(this)
-//        val categoryAdapter = KamusCategoryAdapter()
-//        binding.rvCategory.adapter = categoryAdapter
-//
-//        categoryAdapter.submitList(categoryList)
     }
 }
