@@ -74,6 +74,7 @@ class MainActivity : AppCompatActivity() {
 
             yes.setOnClickListener {
                 sessionViewModel.clearSession()
+                dialog.dismiss()
             }
 
         }
