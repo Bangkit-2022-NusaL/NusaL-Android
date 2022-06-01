@@ -2,8 +2,12 @@ package com.capstone.nusal.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.capstone.nusal.R
 import com.capstone.nusal.data.SessionDataStore
 import com.capstone.nusal.data.TokenHolder
 import com.capstone.nusal.databinding.ActivityMainBinding
@@ -49,13 +53,36 @@ class MainActivity : AppCompatActivity() {
         // TODO: Logout
 
         binding.btnLogout.setOnClickListener {
-            sessionViewModel.clearSession()
+//            sessionViewModel.clearSession()
             // Add AlertDialog
+            val view = View.inflate(this@MainActivity, R.layout.dialog_logout, null)
+
+            val builder = AlertDialog.Builder(this@MainActivity)
+            builder.setView(view)
+
+            val dialog = builder.create()
+            dialog.show()
+            dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+            val cancel : Button = view.findViewById(R.id.btn_cancel)
+            val yes : Button = view.findViewById(R.id.btn_yes)
+
+
+            cancel.setOnClickListener {
+                dialog.hide()
+            }
+
+            yes.setOnClickListener {
+                sessionViewModel.clearSession()
+            }
+
         }
 
         binding.cardBelajar.setOnClickListener {
             startActivity(Intent(this@MainActivity, LearnLanguageCategoryActivity::class.java))
         }
+
+
 //
 //        binding.cardKamus.setOnClickListener {
 //            startActivity(Intent(this@MainActivity, KamusCategoryActivity::class.java))

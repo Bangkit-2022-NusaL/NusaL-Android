@@ -7,6 +7,10 @@
     <string name="background_logo_aplikasi">Background logo Aplikasi</string>
     <string name="mari_latih_menulis_aksara_mu">Mari latih menulis aksara-mu</string>
     <string name="belajar_menulis_aksara">Belajar Menulis Aksara</string>
+    <string name="icon_warning">icon warning</string>
+    <string name="logout_alert_txt">Apakah Anda ingin melakukan Logout ?</string>
+    <string name="tidak">Tidak</string>
+    <string name="iya">Iya</string>
 
     <string-array name="language_choice">
         <item>Jawa</item>
