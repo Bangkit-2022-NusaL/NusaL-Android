@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.MotionEvent
+import android.view.View
 import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
@@ -72,11 +73,11 @@ class LearnLanguageAksaraActivity : AppCompatActivity() {
         binding.btnCheckAksara.setOnClickListener {
             classifyDrawing()
             binding.btnCheckAksara.isEnabled = false
+            binding.pbInferenceLoading.visibility = View.VISIBLE
         }
 
         binding.btnClearCanvas.setOnClickListener {
             drawView?.clearCanvas()
-            binding.tvPrediction.text = "Mulai menulis"
         }
 
         aksaraClassifier
@@ -91,6 +92,7 @@ class LearnLanguageAksaraActivity : AppCompatActivity() {
             aksaraClassifier
                 .classifyAsync(bitmap)
                 .addOnSuccessListener { result ->
+                    binding.pbInferenceLoading.visibility = View.GONE
                     val aksaraResult = specifyAksara(result, intent.getStringExtra(EXTRA_LANGUAGE).toString())
 
                     if(binding.tvLearnAksaraTitle.text.toString() == aksaraResult) {
@@ -103,7 +105,7 @@ class LearnLanguageAksaraActivity : AppCompatActivity() {
                     binding.btnCheckAksara.isEnabled = true
                 }
                 .addOnFailureListener { e ->
-                    binding.tvPrediction.text = "Fail to classify"
+                    binding.pbInferenceLoading.visibility = View.GONE
                     Log.e(TAG, "Error classifying drawing.", e)
                     binding.btnCheckAksara.isEnabled = true
                 }
