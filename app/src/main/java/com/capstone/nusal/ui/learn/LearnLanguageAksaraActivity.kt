@@ -82,7 +82,7 @@ class LearnLanguageAksaraActivity : AppCompatActivity() {
 
         aksaraClassifier
             .initialize()
-            .addOnFailureListener { e -> Log.e(TAG, "Error to setting up digit classifier.", e) }
+            .addOnFailureListener { e -> Log.e(TAG, "Error to setting up aksara classifier.", e) }
     }
 
     private fun classifyDrawing() {
@@ -94,6 +94,8 @@ class LearnLanguageAksaraActivity : AppCompatActivity() {
                 .addOnSuccessListener { result ->
                     binding.pbInferenceLoading.visibility = View.GONE
                     val aksaraResult = specifyAksara(result, intent.getStringExtra(EXTRA_LANGUAGE).toString())
+
+                    Log.d(TAG, aksaraResult.toString())
 
                     if(binding.tvLearnAksaraTitle.text.toString() == aksaraResult) {
                         setSuccessDialogContent(aksaraResult)
@@ -146,13 +148,14 @@ class LearnLanguageAksaraActivity : AppCompatActivity() {
     }
 
     private fun setSuccessDialogContent(aksara: String) {
-        // change to getstring later
-        successPopupBinding.tvCongrats.text = "Selamat! Anda berhasil menulis aksara $aksara dengan benar!"
+        successPopupBinding.tvCongrats.text = getString(R.string.pop_aksara_benar, aksara)
     }
 
     override fun onDestroy() {
         super.onDestroy()
         aksaraClassifier.close()
+        successPopup.dismiss()
+        failurePopup.dismiss()
     }
 
     companion object {

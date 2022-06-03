@@ -7,14 +7,17 @@
     android:padding="16dp"
     tools:context=".ui.learn.LearnLanguageAksaraActivity">
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_meaning"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         app:cardCornerRadius="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="#EFEAD8"
+        app:strokeColor="@color/black_200"
+        app:strokeWidth="2dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -28,7 +31,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:src="@tools:sample/avatars" />
+                tools:src="@tools:sample/avatars"
+                android:contentDescription="@string/content_desc_aksara_image" />
 
             <TextView
                 android:id="@+id/tv_learn_aksara_title"
@@ -44,49 +48,57 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="320dp"
-        android:layout_height="320dp"
-        android:layout_marginTop="28dp"
-        app:cardBackgroundColor="@color/black_200"
-        app:layout_constraintEnd_toEndOf="parent"
+    <FrameLayout
+        android:id="@+id/frame_draw_view"
+        app:layout_constraintTop_toBottomOf="@id/card_meaning"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card_meaning" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
 
-    <com.divyanshu.draw.widget.DrawView
-        android:id="@+id/draw_view"
-        android:layout_width="300dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="32dp"
-        android:translationZ="4dp"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card_meaning" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            app:cardBackgroundColor="@color/black_200"
+            app:cardCornerRadius="10dp"/>
+
+        <com.divyanshu.draw.widget.DrawView
+            android:id="@+id/draw_view"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:translationZ="4dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_meaning"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_clear_canvas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Hapus Kanvas"
+        android:text="@string/hapus_kanvas"
         app:layout_constraintEnd_toStartOf="@+id/btn_check_aksara"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/draw_view" />
+        app:layout_constraintTop_toBottomOf="@id/frame_draw_view" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_check_aksara"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Cek Aksara"
+        android:text="@string/cek_aksara"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn_clear_canvas"
-        app:layout_constraintTop_toBottomOf="@id/draw_view" />
+        app:layout_constraintTop_toBottomOf="@id/frame_draw_view" />
 
     <com.github.ybq.android.spinkit.SpinKitView
         android:id="@+id/pb_inference_loading"

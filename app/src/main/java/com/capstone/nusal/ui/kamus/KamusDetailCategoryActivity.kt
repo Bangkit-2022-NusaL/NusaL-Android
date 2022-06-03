@@ -16,7 +16,7 @@ class KamusDetailCategoryActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         // RecyclerView TBD
-
+        // Implement searchView is possible
     }
 
     companion object {

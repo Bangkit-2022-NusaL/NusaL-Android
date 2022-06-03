@@ -13,6 +13,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/nusal"
         android:layout_width="360dp"
-        android:layout_height="360dp"/>
+        android:layout_height="360dp"
+        android:contentDescription="@string/nusal_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

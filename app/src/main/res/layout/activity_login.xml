@@ -14,7 +14,8 @@
         android:src="@drawable/nusal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/nusal_logo" />
 
     <com.github.ybq.android.spinkit.SpinKitView
         android:id="@+id/pb_login_loading"
@@ -33,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Masuk"
+        android:text="@string/masuk"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -44,7 +45,7 @@
         android:id="@+id/tv_login_subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Silahkan masuk untuk lanjut"
+        android:text="@string/silahkan_masuk"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_login_header" />
@@ -63,7 +64,7 @@
             android:id="@+id/edt_login_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Masukkan email Anda..."
+            android:hint="@string/masukkan_email"
             android:inputType="textEmailAddress" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -83,7 +84,7 @@
             android:id="@+id/edt_login_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Masukkan kata sandi Anda..."
+            android:hint="@string/masukkan_kata_sandi"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -94,7 +95,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="Masuk"
+        android:text="@string/masuk"
         android:textSize="16sp"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,7 +108,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Belum punya akun? Daftar sekarang!"
+        android:text="@string/belum_punya_akun"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_login" />
@@ -121,7 +122,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="Daftar"
+        android:text="@string/daftar"
         android:textColor="@color/black_200"
         android:textSize="16sp"
         app:cornerRadius="10dp"

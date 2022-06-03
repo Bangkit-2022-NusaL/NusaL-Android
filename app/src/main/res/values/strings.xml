@@ -11,6 +11,33 @@
     <string name="logout_alert_txt">Apakah Anda ingin melakukan Logout ?</string>
     <string name="tidak">Tidak</string>
     <string name="iya">Iya</string>
+    <string name="content_desc_aksara_image">Aksara Image</string>
+    <string name="hapus_kanvas">Hapus Kanvas</string>
+    <string name="cek_aksara">Cek Aksara</string>
+    <string name="pilih_bahasa_aksara">Pilih Bahasa Aksara</string>
+    <string name="lean_detail_header">Pilih salah satu aksara dan mulai belajar!</string>
+    <string name="masuk">Masuk</string>
+    <string name="silahkan_masuk">Silahkan masuk untuk lanjut</string>
+    <string name="masukkan_email">Masukkan email Anda...</string>
+    <string name="masukkan_kata_sandi">Masukkan kata sandi Anda...</string>
+    <string name="belum_punya_akun">Belum punya akun? Daftar sekarang!</string>
+    <string name="daftar">Daftar</string>
+    <string name="nusal_logo">NusaL Logo</string>
+    <string name="content_desc_logout_button">Logout button</string>
+    <string name="content_desc_banner_belajar_aksara">Banner belajar aksara</string>
+    <string name="cek_kamus_mini">Cek kamus mini disini!</string>
+    <string name="content_desc_logo_buku_belajar">Logo buku</string>
+    <string name="content_desc_banner_kamus">Banner kamus</string>
+    <string name="lihat_kamus_kecil">Lihat Kamus Kecil</string>
+    <string name="silahkan_isi_data_anda">Silahkan isi data Anda</string>
+    <string name="masukkan_nama">Masukkan nama Anda...</string>
+    <string name="content_desc_signboard_salah">Signboard salah</string>
+    <string name="popup_aksara_salah">Tulisan aksara Anda belum benar, silahkan coba lagi</string>
+    <string name="coba_lagi">Coba lagi</string>
+    <string name="pop_aksara_benar">Selamat! Anda berhasil menulis aksara %1$s dengan benar!</string>
+    <string name="content_desc_signboard_benar">Signboard benar</string>
+    <string name="kembali">Kembali</string>
+    <string name="content_desc_bahasa_image">Banner representasi budaya bahasa</string>
 
     <string-array name="language_choice">
         <item>Jawa</item>

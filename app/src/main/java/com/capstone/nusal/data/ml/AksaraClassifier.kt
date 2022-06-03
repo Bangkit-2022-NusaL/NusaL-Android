@@ -46,7 +46,7 @@ class AksaraClassifier(private val context: Context, private val modelType: Stri
 
         val model: ByteBuffer = if(modelType == "Jawa") {
             loadModelFile(assetManager, "Aksara_Jawa" + ".tflite")
-        } else { // TODO: Switch Case
+        } else {
             loadModelFile(assetManager, "Aksara_Sunda" + ".tflite")
         }
 
@@ -55,6 +55,7 @@ class AksaraClassifier(private val context: Context, private val modelType: Stri
         val inputShape = interpreter.getInputTensor(0).shape()
         inputImageWidth = inputShape[1]
         inputImageHeight = inputShape[2]
+
         modelInputSize = FLOAT_TYPE_SIZE * inputImageWidth * inputImageHeight * PIXEL_SIZE
 
         this.interpreter = interpreter
@@ -83,8 +84,7 @@ class AksaraClassifier(private val context: Context, private val modelType: Stri
             true
         )
         val byteBuffer = convertBitmapToByteBuffer(resizedImage)
-
-        // val output = Array(1) { FloatArray(OUTPUT_CLASSES_COUNT) }
+        
         val output: Array<FloatArray> = when(modelType) {
             "Jawa" -> {
                 Array(1) { FloatArray(OUTPUT_CLASSES_COUNT_JAWA) }
@@ -97,10 +97,8 @@ class AksaraClassifier(private val context: Context, private val modelType: Stri
             }
         }
 
-        // Run inference with input data
         interpreter?.run(byteBuffer, output)
 
-        // Post-processing: find output with highest probability
         val result = output[0]
         val maxIndex = result.indices.maxByOrNull { result[it] } ?: -1
 
@@ -138,7 +136,6 @@ class AksaraClassifier(private val context: Context, private val modelType: Stri
             val g = (pixelValue shr 8 and 0xFF)
             val b = (pixelValue and 0xFF)
 
-            // Convert RGB to grayscale and normalize pixel value to [0..1].
             val normalizedPixelValue = (r + g + b) / 3.0f / 255.0f
             byteBuffer.putFloat(normalizedPixelValue)
         }

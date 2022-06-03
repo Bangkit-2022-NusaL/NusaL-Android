@@ -14,7 +14,8 @@
         android:src="@drawable/nusal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/nusal_logo" />
 
     <com.github.ybq.android.spinkit.SpinKitView
         android:id="@+id/pb_register_loading"
@@ -32,7 +33,7 @@
         android:id="@+id/tv_register_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Daftar"
+        android:text="@string/daftar"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -44,7 +45,7 @@
         android:id="@+id/tv_register_subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Silahkan isi data Anda"
+        android:text="@string/silahkan_isi_data_anda"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_register_header" />
@@ -63,7 +64,7 @@
             android:id="@+id/edt_register_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Masukkan nama Anda..."
+            android:hint="@string/masukkan_nama"
             android:inputType="text" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -82,7 +83,7 @@
             android:id="@+id/edt_register_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Masukkan email Anda..."
+            android:hint="@string/masukkan_email"
             android:inputType="textEmailAddress" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -102,7 +103,7 @@
             android:id="@+id/edt_register_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Masukkan kata sandi Anda..."
+            android:hint="@string/masukkan_kata_sandi"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -113,7 +114,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="Daftar"
+        android:text="@string/daftar"
         android:textSize="16sp"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"

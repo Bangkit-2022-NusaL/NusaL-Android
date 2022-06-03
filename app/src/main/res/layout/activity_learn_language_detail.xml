@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/tv_detail_header"
-        android:text="Pilih salah satu aksara dan mulai belajar!"
+        android:text="@string/lean_detail_header"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
