@@ -1,5 +1,6 @@
 package com.capstone.nusal.ui
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -17,6 +18,11 @@ class OnboardingActivity : AppCompatActivity() {
         binding = ActivityOnboardingBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupView()
+
+        binding.btnToLogin.setOnClickListener {
+            startActivity(Intent(this@OnboardingActivity, LoginActivity::class.java))
+            finish()
+        }
     }
 
     private fun setupView() {
