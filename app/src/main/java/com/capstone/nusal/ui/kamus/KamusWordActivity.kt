@@ -1,14 +1,9 @@
 package com.capstone.nusal.ui.kamus
 
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.WindowInsets
-import android.view.WindowManager
-import com.capstone.nusal.R
+import androidx.appcompat.app.AppCompatActivity
 import com.capstone.nusal.databinding.ActivityKamusWordBinding
 
-// Kata: Foto, kata Indonesia, kata daerah
 class KamusWordActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityKamusWordBinding
@@ -18,5 +13,11 @@ class KamusWordActivity : AppCompatActivity() {
         binding = ActivityKamusWordBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
+    }
+
+    companion object {
+        const val EXTRA_IMAGE = "extra_image"
+        const val EXTRA_TITLE = "extra_title"
+        const val EXTRA_MEANING = "extra_meaning"
     }
 }

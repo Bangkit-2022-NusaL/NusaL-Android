@@ -11,7 +11,6 @@ import com.capstone.nusal.data.CategoryModel
 import com.capstone.nusal.databinding.ItemCategoryBinding
 import com.capstone.nusal.ui.kamus.KamusDetailCategoryActivity
 
-// Ini dipakai di KamusCategoryActivity
 class KamusCategoryAdapter: ListAdapter<CategoryModel, KamusCategoryAdapter.CategoryViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(
@@ -34,7 +33,7 @@ class KamusCategoryAdapter: ListAdapter<CategoryModel, KamusCategoryAdapter.Cate
 
         fun bind(data: CategoryModel) {
             Glide.with(itemView.context)
-                .load(data.categoryImage) // TODO: Add placeholder
+                .load(data.categoryImage)
                 .into(binding.imgCategory)
 
             binding.tvCategoryName.text = data.categoryName

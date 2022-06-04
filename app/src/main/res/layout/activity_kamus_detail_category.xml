@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/img_kamus_bahasa"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,7 +18,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
         android:background="@drawable/linear_gradient_angle270"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,6 +37,17 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:text="Jawa" />
 
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/sv_kamus"
+        app:layout_constraintTop_toBottomOf="@id/img_kamus_bahasa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:defaultQueryHint="Cari kata disini..."
+        android:clickable="true"
+        android:focusable="true"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_detail_category"
         android:layout_width="match_parent"
@@ -45,7 +56,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_kamus_bahasa"
+        app:layout_constraintTop_toBottomOf="@id/sv_kamus"
         app:spanCount="2"
         android:foregroundGravity="center_horizontal"/>
 
