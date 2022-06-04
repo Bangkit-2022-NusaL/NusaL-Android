@@ -120,7 +120,7 @@ class RegisterActivity : AppCompatActivity() {
                             }
                             is Result.Error -> {
                                 binding.pbRegisterLoading.visibility = View.GONE
-                                Toast.makeText(this@RegisterActivity, "Daftar gagal", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this@RegisterActivity, "Email sudah terdaftar", Toast.LENGTH_SHORT).show()
                             }
                         }
                     }
