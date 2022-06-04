@@ -38,6 +38,7 @@
     <string name="content_desc_signboard_benar">Signboard benar</string>
     <string name="kembali">Kembali</string>
     <string name="content_desc_bahasa_image">Banner representasi budaya bahasa</string>
+    <string name="pilih_bahasa_kamus">Pilih Bahasa Kamus</string>
 
     <string-array name="language_choice">
         <item>Jawa</item>

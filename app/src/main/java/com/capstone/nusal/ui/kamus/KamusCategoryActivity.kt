@@ -20,5 +20,24 @@ class KamusCategoryActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         // Using item and adapter TBD
+
+        binding.rvCategory.layoutManager = LinearLayoutManager(this)
+        val rvAdapter = KamusCategoryAdapter()
+        binding.rvCategory.adapter = rvAdapter
+
+        val languageChoice = resources.getStringArray(R.array.language_choice)
+        val languageImage = resources.getStringArray(R.array.language_image)
+
+        val listLanguage = arrayListOf<CategoryModel>()
+
+        for(i in languageChoice.indices) {
+            listLanguage.add(CategoryModel(languageChoice[i], languageImage[i]))
+        }
+
+        rvAdapter.submitList(listLanguage)
+
+
+
+
     }
 }

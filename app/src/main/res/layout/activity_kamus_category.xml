@@ -8,7 +8,7 @@
 
     <TextView
         android:id="@+id/tv_category_header"
-        android:text="Pilih Bahasa Kamus"
+        android:text="@string/pilih_bahasa_kamus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24sp"
