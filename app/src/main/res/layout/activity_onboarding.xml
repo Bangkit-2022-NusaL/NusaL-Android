@@ -15,7 +15,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/content_desc_onboarding_image_1" />
 
     <TextView
         android:id="@+id/tv_page1"
@@ -23,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="Hai! Selamat datang di NusaL!"
+        android:text="@string/onboarding_content_1"
         android:textColor="@color/black_200"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -39,14 +40,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/content_desc_onboarding_image_2" />
 
     <TextView
         android:id="@+id/tv_page2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="NusaL adalah aplikasi untuk belajar aksara lokal Indonesia, seperti bahasa Jawa dan Sunda"
+        android:text="@string/onboarding_content_2"
         android:textColor="@color/black_200"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -63,14 +65,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/content_desc_onboarding_image_3" />
 
     <TextView
         android:id="@+id/tv_page3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Kamu akan belajar menulis aksara dengan bantuan pengecekan machine learning secara otomatis"
+        android:text="@string/onboarding_content_3"
         android:textColor="@color/black_200"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -87,7 +90,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/content_desc_onboarding_image_4" />
 
     <TextView
         android:id="@+id/tv_page4"
@@ -95,7 +99,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="Tunggu apa lagi, mari bergabung bersama NusaL!"
+        android:text="@string/onboarding_content_4"
         android:textColor="@color/black_200"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -109,7 +113,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:alpha="0"
-        android:text="Daftar Sekarang"
+        android:text="@string/daftar_sekarang"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_page4" />

@@ -10,3 +10,8 @@ data class RegisterRequestBody(
     val email: String,
     val password: String
 )
+
+data class ResetPasswordRequestBody(
+    val email: String,
+    val password: String
+)

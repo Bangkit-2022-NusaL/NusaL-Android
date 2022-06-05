@@ -17,6 +17,9 @@ class NusaRepository(
     private val _isRegisterSuccess = MutableLiveData<RegisterResponse>()
     private val isRegisterSuccess: LiveData<RegisterResponse> = _isRegisterSuccess
 
+    private val _resetPasswordResponse = MutableLiveData<ResetPasswordResponse>()
+    private val resetPasswordResponse: LiveData<ResetPasswordResponse> = _resetPasswordResponse
+
     fun login(email: String, password: String): LiveData<Result<LoginResponse>> = liveData {
         emit(Result.Loading)
 
@@ -53,6 +56,25 @@ class NusaRepository(
             emitSource(result)
         } catch (e: Exception) {
             Log.d("NusaRepository", "login: ${e.message.toString()}")
+            emit(Result.Error(e.message.toString()))
+        }
+    }
+
+    fun resetPassword(email: String, newPassword: String) = liveData {
+        emit(Result.Loading)
+
+        try {
+            val resetPasswordBody = ResetPasswordRequestBody(email, newPassword)
+            val response = apiService.userResetPassword(resetPasswordBody)
+
+            _resetPasswordResponse.value = response
+
+            val result: LiveData<Result<ResetPasswordResponse>> = resetPasswordResponse.map {
+                Result.Success(it)
+            }
+
+            emitSource(result)
+        } catch (e: Exception) {
             emit(Result.Error(e.message.toString()))
         }
     }

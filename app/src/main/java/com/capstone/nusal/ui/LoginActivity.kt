@@ -132,6 +132,10 @@ class LoginActivity : AppCompatActivity() {
         binding.btnToRegister.setOnClickListener {
             startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
         }
+
+        binding.tvForgotPassword.setOnClickListener {
+            // startActivity(Intent(this@LoginActivity, ForgotPasswordActivity::class.java))
+        }
     }
 
     private fun setupView() {

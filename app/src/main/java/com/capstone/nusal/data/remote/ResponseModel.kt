@@ -20,3 +20,8 @@ data class RegisterResponse(
     @field:SerializedName("message")
     val message: String
 )
+
+data class ResetPasswordResponse(
+    @field:SerializedName("message")
+    val message: String
+)

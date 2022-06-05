@@ -17,5 +17,8 @@ interface ApiService {
         @Body registerRequestBody: RegisterRequestBody
     ): RegisterResponse
 
-
+    @POST("/password-reset")
+    suspend fun userResetPassword(
+        @Body resetPasswordRequestBody: ResetPasswordRequestBody
+    ): ResetPasswordResponse
 }

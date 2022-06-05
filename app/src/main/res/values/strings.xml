@@ -39,6 +39,19 @@
     <string name="kembali">Kembali</string>
     <string name="content_desc_bahasa_image">Banner representasi budaya bahasa</string>
     <string name="pilih_bahasa_kamus">Pilih Bahasa Kamus</string>
+    <string name="lupa_kata_sandi">Lupa kata sandi?</string>
+    <string name="content_desc_onboarding_image_1">Onboarding image 1</string>
+    <string name="onboarding_content_1">Hai! Selamat datang di NusaL!</string>
+    <string name="content_desc_onboarding_image_2">Onboarding image 2</string>
+    <string name="onboarding_content_2">NusaL adalah aplikasi untuk belajar aksara lokal Indonesia, seperti bahasa Jawa dan Sunda</string>
+    <string name="content_desc_onboarding_image_3">Onboarding image 3</string>
+    <string name="onboarding_content_3">Kamu akan belajar menulis aksara dengan bantuan pengecekan machine learning secara otomatis</string>
+    <string name="content_desc_onboarding_image_4">Onboarding image 4</string>
+    <string name="onboarding_content_4">Tunggu apa lagi, mari bergabung bersama NusaL!</string>
+    <string name="daftar_sekarang">Daftar Sekarang</string>
+    <string name="masukkan_kata_sandi_baru">Masukkan kata sandi baru...</string>
+    <string name="ulangi_kata_sandi_baru">Ulangi kata sandi baru...</string>
+    <string name="reset_kata_sandi">Reset Kata Sandi</string>
 
     <string-array name="language_choice">
         <item>Jawa</item>
@@ -139,4 +152,6 @@
         <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/wa.png</item>
         <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/ya.png</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -17,6 +17,9 @@ class ViewModelFactory(private val nusaRepository: NusaRepository): ViewModelPro
             modelClass.isAssignableFrom(RegisterViewModel::class.java) -> {
                 RegisterViewModel(nusaRepository) as T
             }
+            modelClass.isAssignableFrom(ForgotPasswordViewModel::class.java) -> {
+                ForgotPasswordViewModel(nusaRepository) as T
+            }
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }
     }
