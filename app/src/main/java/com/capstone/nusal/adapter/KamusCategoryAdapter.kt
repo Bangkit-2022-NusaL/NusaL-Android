@@ -41,6 +41,8 @@ class KamusCategoryAdapter: ListAdapter<CategoryModel, KamusCategoryAdapter.Cate
             itemView.setOnClickListener {
                 val toDetailCategory = Intent(itemView.context, KamusDetailCategoryActivity::class.java)
                 toDetailCategory.putExtra(KamusDetailCategoryActivity.EXTRA_CATEGORY, data.categoryName)
+                toDetailCategory.putExtra(KamusDetailCategoryActivity.EXTRA_IMAGE, data.categoryImage)
+
                 itemView.context.startActivity(toDetailCategory)
             }
         }

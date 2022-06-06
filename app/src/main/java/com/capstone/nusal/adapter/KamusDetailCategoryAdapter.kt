@@ -40,6 +40,7 @@ class KamusDetailCategoryAdapter: ListAdapter<KamusDetailModel, KamusDetailCateg
         fun bind(data: KamusDetailModel) {
             Glide.with(itemView.context)
                 .load(data.wordImageUrl)
+                .circleCrop()
                 .into(binding.imgItemDetailCategory)
 
             binding.tvItemDetailCategory.text = data.wordName

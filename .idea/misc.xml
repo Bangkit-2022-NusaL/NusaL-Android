@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/drawable/bg_alert_dialog.xml" value="0.117" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/drawable/category_linear_gradient.xml" value="0.1" />
+        <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.128" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/drawable/ic_baseline_check_circle_outline_24.xml" value="0.1" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/drawable/ic_baseline_circle_24.xml" value="0.13" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/drawable/ic_baseline_library_books_24.xml" value="0.117" />
@@ -19,6 +20,7 @@
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/drawable/linear_gradient_item_aksara.xml" value="0.1" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/drawable/rectangle_opacity_layer.xml" value="0.125" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/drawable/rectangle_shape.xml" value="0.1235" />
+        <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/drawable/trial_background.xml" value="0.128" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_category.xml" value="0.264" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_detail_category.xml" value="0.25" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_forgot_password.xml" value="0.17407407407407408" />
@@ -30,7 +32,7 @@
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_learn_language_aksara.xml" value="0.2" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_learn_language_category.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_learn_language_detail.xml" value="0.20521590423257802" />
-        <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_onboarding.xml" value="0.1" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/activity_register.xml" value="0.264" />
@@ -42,6 +44,7 @@
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/item_aksara.xml" value="0.25" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/item_category.xml" value="0.264" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/item_detail_category.xml" value="0.25" />
+        <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/item_kamus_detail_category.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/item_learn_language.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/ken/AndroidStudioProjects/NusaL/app/src/main/res/layout/item_learn_language_category.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2901590983072917" />

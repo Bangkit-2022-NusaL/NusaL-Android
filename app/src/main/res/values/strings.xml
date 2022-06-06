@@ -63,8 +63,6 @@
         <item>https://storage.googleapis.com/nusal_resource/banner/bannerSunda.png</item>
     </string-array>
 
-    <!-- Buat list kata jawa, image, dan arti indonesia-->
-
     <string-array name="belajar_aksara_jawa_title">
         <item>ba</item>
         <item>ca</item>
@@ -152,9 +150,63 @@
         <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/wa.png</item>
         <item>https://storage.googleapis.com/nusal_resource/Aksara%20Image/Aksara%20Sunda/ya.png</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="cek_email_anda_untuk_memverifikasi">Cek email Anda untuk memverifikasi</string>
     <string name="content_desc_image_email_verif">Image Email Verif</string>
     <string name="ganti_kata_sandi">Ganti kata sandi</string>
+    <string name="content_desc_image_banner_kamus">Image banner kamus</string>
+    <string name="logo_back">Logo back</string>
+    <string name="content_desc_kamus_image">Kamus image</string>
+
+    <string-array name="kamus_jawa_title">
+        <item>Pisang / Gedhang</item>
+        <item>Tanah / Lemah</item>
+        <item>Laki-laki / Lanang</item>
+        <item>Perempuan / Wadon</item>
+        <item>Apa kabar / Piye kabare</item>
+        <item>Makan / Mangan</item>
+        <item>Minum / Ngombe</item>
+        <item>Ayam / Pitik</item>
+        <item>Kelinci / Terwelu</item>
+        <item>Pensil / Potlot</item>
+    </string-array>
+
+    <string-array name="kamus_jawa_image">
+        <item>https://img.okezone.com/content/2020/05/15/298/2214844/ciri-ciri-pisang-matang-sempurna-bReK2YGBA0.jpg</item>
+        <item>https://images.unsplash.com/photo-1492496913980-501348b61469?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=387&amp;q=80</item>
+        <item>https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=580&amp;q=80</item>
+        <item>https://images.unsplash.com/photo-1605406575497-015ab0d21b9b?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=387&amp;q=80</item>
+        <item>https://images.unsplash.com/photo-1530027274588-1221f21bbbee?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80</item>
+        <item>https://images.unsplash.com/photo-1567359888049-674e9aacdc28?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=387&amp;q=80</item>
+        <item>https://images.unsplash.com/photo-1558275499-d20f16427dd9?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=387&amp;q=80</item>
+        <item>https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=387&amp;q=80</item>
+        <item>https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=387&amp;q=80</item>
+        <item>https://images.unsplash.com/photo-1629197258786-2f7b4e607840?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=327&amp;q=80</item>
+    </string-array>
+
+    <string-array name="kamus_jawa_desc">
+        <item>Buah yang berwarna kuning dan manis. Ada bermacam-macam jenis pisang, seperti ambon, barangan, raja, dan uli. Bisa dimakan dengan variasi seperti pisang goreng.</item>
+        <item>Bahan dari bumi. Media untuk bercocok tanam.</item>
+        <item>Arti untuk makhluk hidup dengan gender pria.</item>
+        <item>Arti untuk makhluk hidup dengan gender wanita.</item>
+        <item>Frasa yang digunakan untuk menanyakan kabar, bisa digunakan ke semua orang dengan sopan.</item>
+        <item>Memasukkan makanan/sesuatu ke dalam mulut untuk dikonsumsi.</item>
+        <item>Memasukkan air (atau benda cair) ke dalam mulut dan meneguknya.</item>
+        <item>Unggas yang tidak dapat terbang. Biasanya dijadikan hewan ternak. Ayam jantan berkokok dan bertaji, sedangkan ayam betina berkotek dan tidak bertaji.</item>
+        <item>Mamalia pengerat dengan telinga panjang, berekor pendek, dan kaki belakang yang lebih panjang daripada kaki depan.</item>
+        <item>Alat tulis berupa kayu kecil berisi grafit yang dapat dihapus dengan penghapus.</item>
+    </string-array>
+
+    <string-array name="kamus_sunda_title">
+
+    </string-array>
+
+    <string-array name="kamus_sunda_image">
+
+    </string-array>
+
+    <string-array name="kamus_sunda_desc">
+
+    </string-array>
 </resources>

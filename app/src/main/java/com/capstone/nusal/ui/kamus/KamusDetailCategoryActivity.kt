@@ -6,7 +6,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
+import com.bumptech.glide.Glide
+import com.capstone.nusal.R
 import com.capstone.nusal.adapter.KamusDetailCategoryAdapter
+import com.capstone.nusal.data.KamusDetailModel
 import com.capstone.nusal.databinding.ActivityKamusDetailCategoryBinding
 
 // Berisi kata2 dan foto
@@ -20,12 +23,30 @@ class KamusDetailCategoryActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.hide()
 
+        val kamusList = mutableListOf<KamusDetailModel>()
+
+        Glide.with(this)
+            .load(intent?.getStringExtra(EXTRA_IMAGE).toString())
+            .into(binding.imgKamusBahasa)
+
         when(intent.getStringExtra(EXTRA_CATEGORY)) {
             "Jawa" -> {
-                // Get array
+                val kamusTitle = resources.getStringArray(R.array.kamus_jawa_title)
+                val kamusImage = resources.getStringArray(R.array.kamus_jawa_image)
+                val kamusDesc = resources.getStringArray(R.array.kamus_jawa_desc)
+
+                for(i in kamusTitle.indices) {
+                    kamusList.add(KamusDetailModel(kamusTitle[i], kamusImage[i], kamusDesc[i]))
+                }
             }
             "Sunda" -> {
-                // Get array
+                val kamusTitle = resources.getStringArray(R.array.kamus_sunda_title)
+                val kamusImage = resources.getStringArray(R.array.kamus_sunda_image)
+                val kamusDesc = resources.getStringArray(R.array.kamus_sunda_desc)
+
+                for(i in kamusTitle.indices) {
+                    kamusList.add(KamusDetailModel(kamusTitle[i], kamusImage[i], kamusDesc[i]))
+                }
             }
         }
 
@@ -33,9 +54,8 @@ class KamusDetailCategoryActivity : AppCompatActivity() {
         val detailKamusAdapter = KamusDetailCategoryAdapter()
         binding.rvDetailCategory.adapter = detailKamusAdapter
 
-        // detailKamusAdapter.submitList()
+        detailKamusAdapter.submitList(kamusList)
 
-        // Bikin SearchView disini
         val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
         val searchView = binding.svKamus
 
@@ -46,16 +66,22 @@ class KamusDetailCategoryActivity : AppCompatActivity() {
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                // Create Local List
-                // Loop, if each item contains newText.lowercase(), add to list
-                // Submit list
+                val searchedKamusList = mutableListOf<KamusDetailModel>()
+
+                for(i in kamusList) {
+                    if(i.wordName.lowercase().contains(newText.toString().lowercase())) {
+                        searchedKamusList.add(i)
+                    }
+                }
+
+                detailKamusAdapter.submitList(searchedKamusList)
                 return true
             }
-
         })
     }
 
     companion object {
         const val EXTRA_CATEGORY = "extra_category"
+        const val EXTRA_IMAGE = "extra_image"
     }
 }

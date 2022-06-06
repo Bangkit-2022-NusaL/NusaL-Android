@@ -14,7 +14,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/kategori_tumbuhan" />
+        tools:src="@drawable/kategori_tumbuhan"
+        android:contentDescription="@string/content_desc_image_banner_kamus" />
 
     <View
         android:layout_width="match_parent"
@@ -46,7 +47,8 @@
         android:layout_height="wrap_content"
         app:defaultQueryHint="Cari kata disini..."
         android:clickable="true"
-        android:focusable="true"/>
+        android:focusable="true"
+        app:iconifiedByDefault="false" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_detail_category"
