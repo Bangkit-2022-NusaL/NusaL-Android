@@ -199,14 +199,43 @@
     </string-array>
 
     <string-array name="kamus_sunda_title">
-
+        <item>Buah-buahan / Bungbuahan</item>
+        <item>Tanah / Taneuh</item>
+        <item>Laki-laki / Lalaki</item>
+        <item>Perempuan / Awewe</item>
+        <item>Apa kabar / Kumaha damang</item>
+        <item>Makan / Dahar</item>
+        <item>Minum / Inum</item>
+        <item>Ayam / Hayam</item>
+        <item>Binatang / Sasatoan</item>
+        <item>Bahagia / Bagja</item>
     </string-array>
 
     <string-array name="kamus_sunda_image">
-
+        <item>https://images.unsplash.com/photo-1610832958506-aa56368176cf?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80</item>
+        <item>https://images.unsplash.com/photo-1492496913980-501348b61469?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=774&amp;q=80</item>
+        <item>https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2071&amp;q=80</item>
+        <item>https://images.unsplash.com/photo-1513097847644-f00cfe868607?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=770&amp;q=80</item>
+        <item>https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dGFsa2luZ3xlbnwwfHwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60</item>
+        <item>https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Zm9vZHxlbnwwfHwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60</item>
+        <item>https://images.unsplash.com/photo-1481671703460-040cb8a2d909?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=774&amp;q=80</item>
+        <item>https://images.unsplash.com/photo-1612170153139-6f881ff067e0?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80</item>
+        <item>https://images.unsplash.com/photo-1579762714453-51d9913984e2?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1031&amp;q=80</item>
+        <item>https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8aGFwcHl8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60</item>
     </string-array>
 
+
     <string-array name="kamus_sunda_desc">
+        <item>Hasil reproduksi antara putik dan serbuk sari pada tumbuhan. Buah termasuk organ pada tumbuhan berbunga yang merupakan perkembangan lanjutan dari bakal buah.</item>
+        <item>Bahan dari bumi. Media untuk bercocok tanam.</item>
+        <item>Arti untuk makhluk hidup dengan gender pria.</item>
+        <item>Arti untuk makhluk hidup dengan gender wanita.</item>
+        <item>Frasa yang digunakan untuk menanyakan kabar, bisa digunakan ke semua orang dengan sopan.</item>
+        <item>Memasukkan makanan/sesuatu ke dalam mulut untuk dikonsumsi.</item>
+        <item>Memasukkan air (atau benda cair) ke dalam mulut dan meneguknya.</item>
+        <item>Unggas yang tidak dapat terbang. Biasanya dijadikan hewan ternak. Ayam jantan berkokok dan bertaji, sedangkan ayam betina berkotek dan tidak bertaji.</item>
+        <item>Makhluk bernyawa yang mampu bergerak (berpindah tempat) dan mampu bereaksi terhadap rangsangan, tetapi tidak berakal budi (seperti anjing, kerbau, semut)</item>
+        <item>Keadaan atau perasaan senang dan tenteram (bebas dari segala yang menyusahkan)</item>
 
     </string-array>
 </resources>
