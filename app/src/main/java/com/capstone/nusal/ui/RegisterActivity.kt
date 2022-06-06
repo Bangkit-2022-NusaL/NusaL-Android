@@ -27,7 +27,7 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setupView()
+//        setupView()
 
         supportActionBar?.hide()
         val factory: ViewModelFactory = ViewModelFactory.getInstance(this)
@@ -102,6 +102,11 @@ class RegisterActivity : AppCompatActivity() {
             }
 
         })
+
+        binding.tvToLogin.setOnClickListener {
+            startActivity(Intent(this@RegisterActivity, LoginActivity::class.java))
+            finish()
+        }
 
         binding.btnRegister.setOnClickListener {
             val registerName = binding.edtRegisterName.text.toString()

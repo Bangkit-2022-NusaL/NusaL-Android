@@ -34,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setupView()
+//        setupView()
         supportActionBar?.hide()
 
         val session = SessionDataStore.getInstance(dataStore)

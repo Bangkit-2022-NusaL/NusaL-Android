@@ -17,10 +17,11 @@ class OnboardingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityOnboardingBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setupView()
+//        setupView()
+        supportActionBar?.hide()
 
         binding.btnToLogin.setOnClickListener {
-            startActivity(Intent(this@OnboardingActivity, LoginActivity::class.java))
+            startActivity(Intent(this@OnboardingActivity, RegisterActivity::class.java))
             finish()
         }
     }
