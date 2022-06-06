@@ -35,6 +35,7 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupView()
+        supportActionBar?.hide()
 
         val session = SessionDataStore.getInstance(dataStore)
         val sessionViewModel = ViewModelProvider(this, SessionViewModelFactory(session))[SessionViewModel::class.java]
