@@ -159,6 +159,7 @@
     <string name="logo_back">Logo back</string>
     <string name="content_desc_kamus_image">Kamus image</string>
     <string name="sudah_mempunyai_akun_login_disini">Sudah mempunyai Akun? <b>Login Disini!</b></string>
+    <string name="gabung_sekarang">Gabung sekarang!</string>
 
     <string-array name="kamus_jawa_title">
         <item>Pisang / Gedhang</item>

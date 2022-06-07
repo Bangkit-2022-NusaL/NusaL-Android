@@ -97,11 +97,6 @@ class RegisterActivity : AppCompatActivity() {
 
         })
 
-        binding.tvToLogin.setOnClickListener {
-            startActivity(Intent(this@RegisterActivity, LoginActivity::class.java))
-            finish()
-        }
-
         binding.btnRegister.setOnClickListener {
             val registerName = binding.edtRegisterName.text.toString()
             val registerEmail = binding.edtRegisterEmail.text.toString().lowercase()

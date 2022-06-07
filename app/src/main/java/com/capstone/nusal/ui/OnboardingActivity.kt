@@ -16,7 +16,7 @@ class OnboardingActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         binding.btnToLogin.setOnClickListener {
-            startActivity(Intent(this@OnboardingActivity, RegisterActivity::class.java))
+            startActivity(Intent(this@OnboardingActivity, LoginActivity::class.java))
             finish()
         }
     }
