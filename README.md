@@ -16,6 +16,18 @@ This is NusaL - Nusantara Language Android repository. This application acts as 
    * Two types of aksara language, Jawa and Sunda, with their respective model.
    * Mini dictionary for user to read and broaden knowledge of local Indonesia's language.
 
+- ### Screenshots
+   <p align="middle">
+      <img src="https://storage.googleapis.com/nusal_resource/readme_android/login_page.png" width="160" />
+      <img src="https://storage.googleapis.com/nusal_resource/readme_android/register_page.png" width="160" /> 
+      <img src="https://storage.googleapis.com/nusal_resource/readme_android/main_page.png" width="160" />
+      <img src="https://storage.googleapis.com/nusal_resource/readme_android/cek_aksara.png" width="160" />
+      <img src="https://storage.googleapis.com/nusal_resource/readme_android/kamus_kecil.png" width="160" />
+   </p>
+   
+- ### Replicate
+  If you want to more about the project, you can clone this repository or directly download the .zip files, then open the file in Android Studio (preferably). You must have at least Java 11 and Gradle 7.x.x to build this project.
+
 ## Library
 Library used for developing NusaL :
  - AndroidX Core
@@ -29,3 +41,5 @@ Library used for developing NusaL :
  - Google Task API
  - TensorFlow Lite
  - KTX Fragment
+ - Gradle 7.2.0
+ - Kotlin 1.6.21
