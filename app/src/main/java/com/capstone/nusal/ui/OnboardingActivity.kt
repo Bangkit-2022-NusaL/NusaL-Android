@@ -1,12 +1,8 @@
 package com.capstone.nusal.ui
 
 import android.content.Intent
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.WindowInsets
-import android.view.WindowManager
-import com.capstone.nusal.R
+import androidx.appcompat.app.AppCompatActivity
 import com.capstone.nusal.databinding.ActivityOnboardingBinding
 
 class OnboardingActivity : AppCompatActivity() {
@@ -17,25 +13,11 @@ class OnboardingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityOnboardingBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//        setupView()
         supportActionBar?.hide()
 
         binding.btnToLogin.setOnClickListener {
             startActivity(Intent(this@OnboardingActivity, RegisterActivity::class.java))
             finish()
         }
-    }
-
-    private fun setupView() {
-        @Suppress("DEPRECATION")
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            window.insetsController?.hide(WindowInsets.Type.statusBars())
-        } else {
-            window.setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN
-            )
-        }
-        supportActionBar?.hide()
     }
 }

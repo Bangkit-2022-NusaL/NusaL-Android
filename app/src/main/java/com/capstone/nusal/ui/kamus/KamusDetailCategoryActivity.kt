@@ -12,7 +12,6 @@ import com.capstone.nusal.adapter.KamusDetailCategoryAdapter
 import com.capstone.nusal.data.KamusDetailModel
 import com.capstone.nusal.databinding.ActivityKamusDetailCategoryBinding
 
-// Berisi kata2 dan foto
 class KamusDetailCategoryActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityKamusDetailCategoryBinding

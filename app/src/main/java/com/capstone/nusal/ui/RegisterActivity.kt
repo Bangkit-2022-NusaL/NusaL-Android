@@ -1,19 +1,14 @@
 package com.capstone.nusal.ui
 
 import android.content.Intent
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
-import android.view.Window
-import android.view.WindowInsets
-import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doOnTextChanged
-import com.capstone.nusal.R
 import com.capstone.nusal.data.Result
 import com.capstone.nusal.databinding.ActivityRegisterBinding
 import com.capstone.nusal.viewmodel.RegisterViewModel
@@ -27,7 +22,6 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//        setupView()
 
         supportActionBar?.hide()
         val factory: ViewModelFactory = ViewModelFactory.getInstance(this)
@@ -39,7 +33,7 @@ class RegisterActivity : AppCompatActivity() {
         val fieldRegisterEmail = binding.edtRegisterEmail
         val fieldRegisterPassword = binding.edtRegisterPassword
 
-        fieldRegisterName.doOnTextChanged { text, start, before, count ->
+        fieldRegisterName.doOnTextChanged { text, _, _, _ ->
             if(text.toString().isEmpty()) {
                 binding.tilRegisterName.apply {
                     error = "Nama tidak boleh kosong"
@@ -136,18 +130,5 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this@RegisterActivity, "Silahkan isi semua data", Toast.LENGTH_SHORT).show()
             }
         }
-    }
-
-    private fun setupView() {
-        @Suppress("DEPRECATION")
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            window.insetsController?.hide(WindowInsets.Type.statusBars())
-        } else {
-            window.setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN
-            )
-        }
-        supportActionBar?.hide()
     }
 }

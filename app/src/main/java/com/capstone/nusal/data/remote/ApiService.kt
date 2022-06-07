@@ -1,13 +1,11 @@
 package com.capstone.nusal.data.remote
 
 import retrofit2.http.Body
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
 
 interface ApiService {
 
-    @POST("/user/login") // endpoint
+    @POST("/user/login")
     suspend fun userLogin(
         @Body loginRequestBody: LoginRequestBody
     ): LoginResponse

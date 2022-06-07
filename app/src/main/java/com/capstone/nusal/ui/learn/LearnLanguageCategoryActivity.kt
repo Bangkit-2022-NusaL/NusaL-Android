@@ -1,11 +1,9 @@
 package com.capstone.nusal.ui.learn
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.capstone.nusal.R
-import com.capstone.nusal.adapter.KamusCategoryAdapter
 import com.capstone.nusal.adapter.LearnLanguageCategoryAdapter
 import com.capstone.nusal.data.CategoryModel
 import com.capstone.nusal.databinding.ActivityLearnLanguageCategoryBinding

@@ -1,17 +1,12 @@
 package com.capstone.nusal.ui
 
-import android.os.Build
 import android.os.Bundle
-import android.text.TextWatcher
-import android.view.WindowInsets
-import android.view.WindowManager
+import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.commit
-import androidx.fragment.app.commitNow
-import com.capstone.nusal.R
 import com.capstone.nusal.data.Result
 import com.capstone.nusal.databinding.ActivityForgotPasswordBinding
 import com.capstone.nusal.ui.fragment.SuccessResetPasswordFragment
@@ -26,14 +21,14 @@ class ForgotPasswordActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityForgotPasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setupView()
+
+        supportActionBar?.hide()
 
         val factory = ViewModelFactory.getInstance(this)
         val forgotPasswordViewModel: ForgotPasswordViewModel by viewModels {
             factory
         }
 
-        // Email and Password Validation
         binding.edtForgotEmail.doOnTextChanged { _, _, _, _ ->
             if(binding.edtForgotEmail.isEmailComply) {
                 binding.tilForgotEmail.apply {
@@ -91,13 +86,11 @@ class ForgotPasswordActivity : AppCompatActivity() {
                     if (result != null) {
                         when (result) {
                             is Result.Loading -> {
-                                // Loading start
+                                binding.pbForgotLoading.visibility = View.VISIBLE
                             }
                             is Result.Success -> {
-                                // Loading stop
-                                val response = result.data
+                                binding.pbForgotLoading.visibility = View.GONE
 
-                                // Start fragment transaction
                                 val mFragmentManager = supportFragmentManager
                                 val mSuccessFragment = SuccessResetPasswordFragment()
 
@@ -110,7 +103,8 @@ class ForgotPasswordActivity : AppCompatActivity() {
                                 }
                             }
                             is Result.Error -> {
-                                // Loading Stop
+                                binding.pbForgotLoading.visibility = View.GONE
+
                                 Toast.makeText(
                                     this@ForgotPasswordActivity,
                                     "Gagal mengirim rekues",
@@ -124,18 +118,5 @@ class ForgotPasswordActivity : AppCompatActivity() {
                 Toast.makeText(this@ForgotPasswordActivity, "Isi semua kolom", Toast.LENGTH_SHORT).show()
             }
         }
-    }
-
-    private fun setupView() {
-        @Suppress("DEPRECATION")
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            window.insetsController?.hide(WindowInsets.Type.statusBars())
-        } else {
-            window.setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN
-            )
-        }
-        supportActionBar?.hide()
     }
 }

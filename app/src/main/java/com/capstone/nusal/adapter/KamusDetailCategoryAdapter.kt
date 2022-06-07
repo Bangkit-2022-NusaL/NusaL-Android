@@ -7,11 +7,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.capstone.nusal.data.CategoryModel
 import com.capstone.nusal.data.KamusDetailModel
-import com.capstone.nusal.databinding.ItemCategoryBinding
 import com.capstone.nusal.databinding.ItemKamusDetailCategoryBinding
-import com.capstone.nusal.ui.kamus.KamusDetailCategoryActivity
 import com.capstone.nusal.ui.kamus.KamusWordActivity
 import com.capstone.nusal.ui.kamus.KamusWordActivity.Companion.EXTRA_IMAGE
 import com.capstone.nusal.ui.kamus.KamusWordActivity.Companion.EXTRA_MEANING
@@ -22,7 +19,7 @@ class KamusDetailCategoryAdapter: ListAdapter<KamusDetailModel, KamusDetailCateg
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): KamusDetailCategoryAdapter.CategoryViewHolder {
+    ): CategoryViewHolder {
         val binding = ItemKamusDetailCategoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return CategoryViewHolder(binding)
     }

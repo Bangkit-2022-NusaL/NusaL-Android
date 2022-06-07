@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.capstone.nusal.R
 import com.capstone.nusal.adapter.LearnLanguageDetailAdapter
 import com.capstone.nusal.data.LearnLanguageModel

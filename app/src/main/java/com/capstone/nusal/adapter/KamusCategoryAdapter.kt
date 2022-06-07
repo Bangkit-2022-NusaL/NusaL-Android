@@ -11,25 +11,28 @@ import com.capstone.nusal.data.CategoryModel
 import com.capstone.nusal.databinding.ItemCategoryBinding
 import com.capstone.nusal.ui.kamus.KamusDetailCategoryActivity
 
-class KamusCategoryAdapter: ListAdapter<CategoryModel, KamusCategoryAdapter.CategoryViewHolder>(DIFF_CALLBACK) {
+class KamusCategoryAdapter :
+    ListAdapter<CategoryModel, KamusCategoryAdapter.CategoryViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): KamusCategoryAdapter.CategoryViewHolder {
-        val binding = ItemCategoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+    ): CategoryViewHolder {
+        val binding =
+            ItemCategoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return CategoryViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
         val category = getItem(position)
 
-        if(category != null) {
+        if (category != null) {
             holder.bind(category)
         }
     }
 
-    class CategoryViewHolder(private val binding: ItemCategoryBinding): RecyclerView.ViewHolder(binding.root) {
+    class CategoryViewHolder(private val binding: ItemCategoryBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
         fun bind(data: CategoryModel) {
             Glide.with(itemView.context)
@@ -39,9 +42,16 @@ class KamusCategoryAdapter: ListAdapter<CategoryModel, KamusCategoryAdapter.Cate
             binding.tvCategoryName.text = data.categoryName
 
             itemView.setOnClickListener {
-                val toDetailCategory = Intent(itemView.context, KamusDetailCategoryActivity::class.java)
-                toDetailCategory.putExtra(KamusDetailCategoryActivity.EXTRA_CATEGORY, data.categoryName)
-                toDetailCategory.putExtra(KamusDetailCategoryActivity.EXTRA_IMAGE, data.categoryImage)
+                val toDetailCategory =
+                    Intent(itemView.context, KamusDetailCategoryActivity::class.java)
+                toDetailCategory.putExtra(
+                    KamusDetailCategoryActivity.EXTRA_CATEGORY,
+                    data.categoryName
+                )
+                toDetailCategory.putExtra(
+                    KamusDetailCategoryActivity.EXTRA_IMAGE,
+                    data.categoryImage
+                )
 
                 itemView.context.startActivity(toDetailCategory)
             }
@@ -54,7 +64,10 @@ class KamusCategoryAdapter: ListAdapter<CategoryModel, KamusCategoryAdapter.Cate
                 return oldUser == newUser
             }
 
-            override fun areContentsTheSame(oldUser: CategoryModel, newUser: CategoryModel): Boolean {
+            override fun areContentsTheSame(
+                oldUser: CategoryModel,
+                newUser: CategoryModel
+            ): Boolean {
                 return oldUser.categoryName == newUser.categoryName
             }
         }

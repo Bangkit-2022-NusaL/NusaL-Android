@@ -1,6 +1,6 @@
 package com.capstone.nusal.helper
 
-fun specifyAksara(codeToCheck: Int, languageType: String): String? {
+fun specifyAksara(codeToCheck: Int, languageType: String): String {
     when(languageType) {
         "Jawa" -> {
             return when(codeToCheck) {

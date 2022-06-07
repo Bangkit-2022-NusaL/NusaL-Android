@@ -3,14 +3,13 @@ package com.capstone.nusal.ui
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.WindowInsets
 import android.view.WindowManager
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.capstone.nusal.R
 import com.capstone.nusal.data.SessionDataStore
 import com.capstone.nusal.data.TokenHolder
 import com.capstone.nusal.data.pref.OnboardingPref

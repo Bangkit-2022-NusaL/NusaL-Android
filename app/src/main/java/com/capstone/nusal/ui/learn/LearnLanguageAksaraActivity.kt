@@ -7,7 +7,6 @@ import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
-import android.view.MotionEvent
 import android.view.View
 import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
@@ -95,7 +94,7 @@ class LearnLanguageAksaraActivity : AppCompatActivity() {
                     binding.pbInferenceLoading.visibility = View.GONE
                     val aksaraResult = specifyAksara(result, intent.getStringExtra(EXTRA_LANGUAGE).toString())
 
-                    Log.d(TAG, aksaraResult.toString())
+                    Log.d(TAG, aksaraResult)
 
                     if(binding.tvLearnAksaraTitle.text.toString() == aksaraResult) {
                         setSuccessDialogContent(aksaraResult)
