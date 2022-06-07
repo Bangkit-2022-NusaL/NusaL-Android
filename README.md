@@ -26,7 +26,12 @@ This is NusaL - Nusantara Language Android repository. This application acts as 
    </p>
    
 - ### Replicate
-  If you want to more about the project, you can clone this repository or directly download the .zip files, then open the file in Android Studio (preferably). You must have at least Java 11 and Gradle 7.x.x to build this project.
+  If you want to more about the project, you can clone this repository or directly download the .zip files, then open the file in Android Studio (preferably). 
+  Prequisites (as this project made with these tools):
+  - Android Studio Chipmunk 2021.2.1
+  - Kotlin 1.6.21
+  - Gradle 7.2.0
+  - JDK (11 by default, preferably using the newest version)
 
 ## Library
 Library used for developing NusaL :
