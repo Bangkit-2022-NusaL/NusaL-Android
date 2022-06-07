@@ -7,6 +7,15 @@ NusaL Android Application is made with Kotlin Native to provide learning platfor
 
 ## Introduction
 
+This is NusaL - Nusantara Language Android repository. This application acts as a platform for out machine learning to deploy. 
+
+- ### Features
+   * Splash screen.
+   * Authentication service, including log in, register, and reset password.
+   * Onboarding page for first timer.
+   * Two types of aksara language, Jawa and Sunda, with their respective model.
+   * Mini dictionary for user to read and broaden knowledge of local Indonesia's language.
+
 ## Library
 Library used for developing NusaL :
  - AndroidX Core
@@ -19,3 +28,4 @@ Library used for developing NusaL :
  - [SpinKit](https://github.com/ybq/Android-SpinKit)
  - Google Task API
  - TensorFlow Lite
+ - KTX Fragment
